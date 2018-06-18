@@ -18,18 +18,20 @@ gem "sass-rails"
 gem "simple_form"
 gem "uglifier"
 gem "webpacker"
-gem "devise", "~> 4.4"
+gem "devise"
+
+gem "rubocop"
+gem "rubocop-rails"
 
 group :development do
   gem "web-console", ">= 3.3.0"
 end
 
 group :development, :test do
+  gem "rake"
   gem "pry-byebug"
   gem "pry-rails"
   gem "listen", "~> 3.0.5"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
-  gem "rubocop", "~> 0.57.2"
-  gem "rubocop-rails"
 end

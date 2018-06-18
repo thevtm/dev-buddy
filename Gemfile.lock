@@ -224,7 +224,7 @@ DEPENDENCIES
   autoprefixer-rails
   bootsnap
   bootstrap-sass (~> 3.3)
-  devise (~> 4.4)
+  devise
   figaro
   font-awesome-sass (~> 5.0.9)
   jbuilder (~> 2.0)
@@ -234,8 +234,9 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 5.2.0)
+  rake
   redis
-  rubocop (~> 0.57.2)
+  rubocop
   rubocop-rails
   sass-rails
   simple_form
