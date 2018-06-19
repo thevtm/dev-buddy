@@ -11,9 +11,11 @@ class Match < ApplicationRecord
 
 
   private
+
   def users_must_be_different
     if user_a == user_b
       errors.add(:user_b, "cannot be the same as user_a")
     end
   end
+
 end

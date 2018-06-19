@@ -8,6 +8,7 @@ AllCops:
     - 'support/**/*'
     - 'tmp/**/*'
     - 'test/**/*'
+    - 'vendor/**/*'
 
 Rails:
   Enabled: true
