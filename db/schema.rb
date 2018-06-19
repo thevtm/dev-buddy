@@ -24,9 +24,8 @@ ActiveRecord::Schema.define(version: 2018_06_19_102359) do
   end
 
   create_table "matches", force: :cascade do |t|
-    t.integer "user_a_id", null: false
-    t.integer "user_b_id", null: false
-    t.boolean "match", null: false
+    t.integer "user_a_id"
+    t.integer "user_b_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
