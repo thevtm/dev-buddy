@@ -10,4 +10,4 @@ before_install:
   - sudo apt-get update
 
 script:
-  - rubocop -d
+  - bundle exec rake rubocop
