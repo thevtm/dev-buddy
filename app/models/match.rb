@@ -16,6 +16,4 @@ class Match < ApplicationRecord
       errors.add(:user_b, "cannot be the same as user_a")
     end
   end
-
-
 end
