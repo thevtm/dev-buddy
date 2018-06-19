@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Tell us about yourself</h1>
+  <%= simple_form_for @user do |f| %>
+    <%= f.input :name %>
+    <%= f.input :location %>
+    <%= f.input :profile_picture %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  <% end %>
+</div>
