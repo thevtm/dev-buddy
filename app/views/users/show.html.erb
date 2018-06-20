@@ -1,2 +1,17 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+
+  <p class="user-profile">
+
+    <picture class="user-profile__image">
+      <img src="https://cdn2.iconfinder.com/data/icons/lil-faces/262/lil-face-2-512.png">
+    </picture>
+
+    <div class="user-profile__content">
+      <h1><%= @user.name %></h1>
+      <p>I am comming from <%= @user.location %>
+      I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+    </div>
+
+  </div>
+
+</div>
