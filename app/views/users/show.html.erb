@@ -1,17 +1,126 @@
-<div class="container">
 
-  <p class="user-profile">
-
-    <picture class="user-profile__image">
-      <img src="https://cdn2.iconfinder.com/data/icons/lil-faces/262/lil-face-2-512.png">
-    </picture>
-
-    <div class="user-profile__content">
-      <h1><%= @user.name %></h1>
-      <p>I am comming from <%= @user.location %>
-      I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-    </div>
-
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">My profile</a>
+        <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+        <li><a href="mobile.html"><i class="material-icons">mail_outline</i></a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
 
+  <!-- end of the footer -->
+
+<div class="container z-depth-5 center-align">
+  <div class="user-partial-profil">
+    <div class="col s12">
+      <div class="collection-item avatar" style="padding-top: 30pt;">
+        <img style= "width: 150px;
+    height: 150px; "class="circle responsive-img" src= '<%= image_path "chica.png" %>'>
+      </div>
+
+      <div class="title-user">
+        <h3>
+        <span><%= @user.name %></span>
+        </h3>
+      </div>
+
+      <div class="location-user">
+        <ul>
+          <li>
+            <i class="material-icons" style="font-size: 50px">add_location</i>
+          </li>
+          <li>
+            <h5>
+            <span><%= @user.location %></span>
+            </h5>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- end of the partial profile -->
+  </div>
+
+    <div class="divider"></div>
+
+  <div class="user-entire-profil">
+
+    <div class="chip-user">
+      <ul>
+        <li>
+          <div class="chip">
+            Rust
+            <i class="close material-icons">close</i>
+          </div>
+          <div class="chip">
+            Rust2
+            <i class="close material-icons">close</i>
+          </div>
+          <div class="chip">
+            Rust3
+            <i class="close material-icons">close</i>
+          </div>
+        </li>
+        <li>
+          <div class="chip">
+            Rails
+            <i class="close material-icons">close</i>
+          </div>
+          <div class="chip">
+            Rails2
+            <i class="close material-icons">close</i>
+          </div>
+        </li>
+        <li>
+          <div class="chip">
+            Full stack
+            <i class="close material-icons">close</i>
+          </div>
+          <div class="chip">
+            Front-end
+            <i class="close material-icons">close</i>
+          </div>
+          <div class="chip">
+            Back-end
+            <i class="close material-icons">close</i>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="description-user">
+      <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsam nulla molestiae, beatae assumenda labore, recusandae incidunt numquam. Beatae ipsam fuga iure est autem optio ipsum explicabo, natus incidunt inventore..</p>
+    </div>
+
+    <!-- end of the entire profile -->
+  </div>
+
+  <div class="button-swipe">
+    <div class="button-swipe-right">
+      <a class="btn-floating btn-large waves-effect waves-light "><i class="material-icons">done</i></a>
+    </div>
+    <div class="button-swipe-left">
+      <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">not_interested</i></a>
+    </div>
+  </div>
+
+
+
+<!-- end of container -->
 </div>
+
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+
