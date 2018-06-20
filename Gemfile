@@ -19,6 +19,7 @@ gem "simple_form"
 gem "uglifier"
 gem "webpacker"
 gem "devise"
+gem "faker"
 
 gem 'materialize-sass', '~> 1.0.0.rc1'
 gem 'material_icons'
