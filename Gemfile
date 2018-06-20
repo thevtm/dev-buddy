@@ -20,6 +20,9 @@ gem "uglifier"
 gem "webpacker"
 gem "devise"
 
+gem 'materialize-sass', '~> 1.0.0.rc1'
+gem 'material_icons'
+
 gem "rubocop"
 gem "rubocop-rails"
 
