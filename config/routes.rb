@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get "users/setting", to: "users#setting", as: :setting_user
+
   resources :users, only: [:index, :show]
 
   resources :matches, only: [:index, :create]
