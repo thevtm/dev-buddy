@@ -10,7 +10,7 @@ class ChatRoomMessage < ApplicationRecord
   private
 
     def user_must_be_in_the_chatroom
-      if ChatRoom.first.users.exists?(user.id) == false
+      if chat_room.users.exists?(user.id) == false
         errors.add(:user, "is not a member of the chat room.")
       end
     end
