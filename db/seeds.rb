@@ -1,7 +1,8 @@
 require 'faker'
 
-User.delete_all
-Match.delete_all
+ChatRoom.destroy_all
+Match.destroy_all
+User.destroy_all
 
 30.times do
   User.create!(
@@ -15,16 +16,19 @@ Match.delete_all
 end
 
 10.times do
-  user_a = User.all.sample
+  user_a = User.order(Arel.sql("RANDOM()")).first
 
   Match.create!(
     user_a_id: user_a.id,
-    user_b_id: User.where.not(id: user_a.id).sample.id,
+    user_b_id: User.where.not(id: user_a.id).order(Arel.sql("RANDOM()")).first.id,
     match: Faker::Boolean.boolean,
   )
 end
 
-# Test Users
+########
+# Test #
+########
+
 test_user_a = User.create!(
   email: "a@a.a",
   password: "111111",
@@ -53,4 +57,22 @@ Match.create!(
   user_a_id: test_user_b.id,
   user_b_id: test_user_a.id,
   match: true,
+)
+
+test_chat_room = ChatRoom.create!()
+
+ChatRoomUser.create!(
+  chat_room: test_chat_room,
+  user: test_user_a,
+)
+
+ChatRoomUser.create!(
+  chat_room: test_chat_room,
+  user: test_user_b,
+)
+
+ChatRoomMessage.create!(
+  chat_room: test_chat_room,
+  user: test_user_a,
+  message: "Hi Test!",
 )
