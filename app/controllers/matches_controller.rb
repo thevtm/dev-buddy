@@ -16,9 +16,5 @@ class MatchesController < ApplicationController
 
 private
 
-  def existing_match?(@user_b)
-    # @user_b = User.find(params[:user_id])
-    @user_b.match_user[:user_id].nil?
-  end
 
 end
