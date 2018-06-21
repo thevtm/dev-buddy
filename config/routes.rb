@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:index]
 
+  get "/chat", to: "chat#inbox", as: :inbox_chat
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
