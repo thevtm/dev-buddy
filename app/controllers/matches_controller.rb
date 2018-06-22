@@ -10,9 +10,9 @@ class MatchesController < ApplicationController
     @user_b = User.find(params[:other_user_id])
 
     if @match = Match.swipe_right(@user_a, @user_b)
-      render :json => { match: true }
+      render json: { match: true }
     else
-      render :json => { match: false }
+      render json: { match: false }
     end
   end
 
