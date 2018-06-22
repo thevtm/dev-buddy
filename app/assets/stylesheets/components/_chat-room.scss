@@ -1,0 +1,31 @@
+.chat-room__header {
+  display: flex;
+  padding: 5px;
+  background-color: #fafafa;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-room__name {
+  margin-right: 20px;
+}
+
+.chat-room__box {
+  background-color: #f0f0f0;
+}
+
+.chat-room__form {
+  display: flex;
+}
+
+.chat-inbox__message {
+  background-color: #ffffff;
+}
+
+.chat-inbox__message--me {
+  text-align: right;
+}
+
+.chat-inbox__message--not-me {
+  text-align: left;
+}
