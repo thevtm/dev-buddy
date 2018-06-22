@@ -6,9 +6,12 @@ Rails.application.routes.draw do
 
   get "users/setting", to: "users#setting", as: :setting_user
 
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show] do
+    resources :matches, only: [:index, :create, :show]
 
-  resources :matches, only: [:index, :create]
+  end
+
+
 
   resources :contacts, only: [:index]
 

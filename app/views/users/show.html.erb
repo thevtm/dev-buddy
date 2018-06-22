@@ -158,7 +158,13 @@
         <a class="waves-effect waves-light btn-large white" style="border-color: blue-grey lighten-3;"><i class="material-icons left">not_interested</i><h5 class="teal-text text-accent-2">Not Mate</h5></a>
       </div>
       <div class="col s6">
-        <a class="waves-effect waves-light teal accent-2 btn-large"><i class="material-icons right">done</i>Mate</a>
+        <%= simple_form_for :match, url: user_matches_path(current_user) do |f| %>
+
+          <%= f.hidden_field :user_b_id, value: @user.id %>
+
+        <button type="submit" class="waves-effect waves-light teal accent-2 btn-large"><i class="material-icons right">done</i>Mate</button>
+
+        <% end %>
       </div>
     </div>
 
