@@ -1,6 +1,6 @@
 $(".match-footer__meet")
   .on("ajax:success", function (event) {
-    const [data, status, xhr] = event.detail;
+    // const [data, status, xhr] = event.detail;
 
     $(".match-profile").css("display", "none");
     $(".match-footer__nav").css("display", "none");
