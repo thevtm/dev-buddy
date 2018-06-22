@@ -1,21 +1,6 @@
 
-<!--   <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">My profile</a>
-        <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
-        <li><a href="mobile.html"><i class="material-icons">mail_outline</i></a></li>
-        </ul>
-      </div>
-    </nav>
-  <!-- end of the footer -->
 
-
-
-<div class="container z-depth-3 center-align white" style="border-radius: 10px;">
+<div class="container z-depth-3 center-align white" style="border-radius: 10px; margin-bottom: 30px;">
   <div class="user-partial-profil">
     <div class="col s12">
       <div class="collection-item avatar" style="padding-top: 30pt;">
@@ -38,12 +23,9 @@
       <div class="location-user">
         <ul>
           <li>
-            <i class="material-icons icon-blue" style="font-size: 50px">add_location</i>
-          </li>
-          <li>
-            <h5>
+            <p>
             <span class="grey-text"><%= @user.location %></span>
-            </h5>
+            </p>
           </li>
         </ul>
       </div>
@@ -56,74 +38,81 @@
   <div class="user-entire-profil">
     <div class="divider teal accent-2" style="width: 80%; margin: auto;"></div>
 
-    <div class="goal-user">
-      <p>
-        <label>
-          <input class="with-gap" name="group1" type="radio" checked />
-          <span>Career opportunity</span>
-        </label>
-      </p>
 
-      <p>
-        <label>
-          <input class="with-gap" name="group2" type="radio" />
-          <span>Business development</span>
-        </label>
-      </p>
-
-      <p>
-        <label>
-          <input class="with-gap" name="group3" type="radio" checked />
-          <span>General networking</span>
-        </label>
-      </p>
-    </div>
-
-    <div class="chip-user">
+    <div class="chip-user" style="margin-top: 30px; margin-bottom: 30px;">
       <ul>
         <li>
           <div class="chip">
             Rust
-            <i class="close material-icons">close</i>
+            <i class="close material-icons"></i>
           </div>
           <div class="chip">
-            Rust2
-            <i class="close material-icons">close</i>
+            Python
+            <i class="close material-icons"></i>
           </div>
           <div class="chip">
-            Rust3
-            <i class="close material-icons">close</i>
+            NodeJS
+            <i class="close material-icons"></i>
           </div>
         </li>
         <li>
           <div class="chip">
             Rails
-            <i class="close material-icons">close</i>
+            <i class="close material-icons"></i>
           </div>
           <div class="chip">
-            Rails2
-            <i class="close material-icons">close</i>
+            Solidity
+            <i class="close material-icons"></i>
           </div>
         </li>
         <li>
           <div class="chip">
             Full stack
-            <i class="close material-icons">close</i>
+            <i class="close material-icons"></i>
           </div>
           <div class="chip">
             Front-end
-            <i class="close material-icons">close</i>
+            <i class="close material-icons"></i>
           </div>
           <div class="chip">
             Back-end
-            <i class="close material-icons">close</i>
+            <i class="close material-icons"></i>
           </div>
         </li>
       </ul>
     </div>
 
 
-      <div class="divider teal accent-2" style="width: 80%; margin: auto;"></div>
+
+
+    <div class="row goal-user" style="margin-top: 30px; margin-bottom: 30px;">
+      <div class="col s4">
+        <div class="goal-user-network">
+          <img class="goal-user-network-image responsive-img" style="width: 75px; height: 75px;" src= '<%= image_path "network.svg" %>'>
+          <h6 class="goal-user-network-text flow-text grey-text">General networking</h6>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="goal-user-network">
+          <img class="goal-user-network-image responsive-img" style="width: 75px; height: 75px;" src= '<%= image_path "objectif.svg" %>'>
+          <h6 class="goal-user-network-text flow-text grey-text">Career opportunity</h6>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="goal-user-network">
+          <img class="goal-user-network-image responsive-img" style="width: 75px; height: 75px;" src= '<%= image_path "freelance.svg" %>'>
+          <h6 class="goal-user-network-text flow-text grey-text">Freelance</h6>
+        </div>
+      </div>
+      <!-- end of goal user -->
+    </div>
+
+
+
+    <div class="divider teal accent-2" style="width: 80%; margin: auto;"></div>
+    <div class="container background-user">
       <div class="section">
         <h5 class="title-experiences teal-text text-accent-2">Previous experience</h5>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maxime deserunt dolor saepe, aut qui, enim earum!
@@ -138,6 +127,7 @@
         <h5 class="title-hobbies teal-text text-accent-2">Hobbies</h5>
         Obcaecati deserunt dicta nulla quas expedita doloremque dolores ipsum placeat laborum perspiciatis? Voluptates!
       </div>
+      <!-- end of background user -->
     </div>
 
     <div class="divider teal accent-2" style="width: 80%; margin: auto;"></div>
@@ -169,11 +159,11 @@
 </div>
 
 
-  <footer class="page-footer">
-    <div class="footer-copyright">
+  <footer class="page-footer white">
+    <div class="footer-copyright white">
       <div class="container">
-      © 2014 Copyright Text
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      © 2018 Copyright Text
+      <a class="grey-text right" href="#!">© 2018 DevBuddy Amazing Team</a>
       </div>
     </div>
   </footer>
