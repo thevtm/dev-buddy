@@ -1,15 +1,19 @@
-
-
 <div class="container z-depth-5 center-align">
   <%= render "shared/navbars/profile" %>
   <div class="user-partial-profil">
     <div class="col s12">
       <div class="collection-item avatar" style="padding-top: 30pt;">
-        <img style= "width: 150px;
-    height: 150px; "class="circle responsive-img" src= '<%= image_path "chica.png" %>'>
+        <img class="avatar-user circle responsive-img z-depth-2" style="
+        width: 150px; height: 150px;
+        margin: 1px;
+        border: 2px solid grey;
+        border-color: #64ffda;
+        border-radius: 500px;
+        -webkit-border-radius: 500px;
+        -moz-border-radius: 500px;" src= '<%= image_path "adultw.jpg" %>'>
       </div>
 
-      <div class="title-user">
+      <div class="title-user teal-text text-accent-2">
         <h3>
         <span><%= @user.name %></span>
         </h3>
@@ -18,11 +22,11 @@
       <div class="location-user">
         <ul>
           <li>
-            <i class="material-icons" style="font-size: 50px">add_location</i>
+            <i class="material-icons icon-blue" style="font-size: 50px">add_location</i>
           </li>
           <li>
             <h5>
-            <span><%= @user.location %></span>
+            <span class="grey-text"><%= @user.location %></span>
             </h5>
           </li>
         </ul>
@@ -32,9 +36,32 @@
     <!-- end of the partial profile -->
   </div>
 
-    <div class="divider"></div>
 
   <div class="user-entire-profil">
+    <div class="divider teal accent-2" style="width: 80%; margin: auto;"></div>
+
+    <div class="goal-user">
+      <p>
+        <label>
+          <input class="with-gap" name="group1" type="radio" checked />
+          <span>Career opportunity</span>
+        </label>
+      </p>
+
+      <p>
+        <label>
+          <input class="with-gap" name="group2" type="radio" />
+          <span>Business development</span>
+        </label>
+      </p>
+
+      <p>
+        <label>
+          <input class="with-gap" name="group3" type="radio" checked />
+          <span>General networking</span>
+        </label>
+      </p>
+    </div>
 
     <div class="chip-user">
       <ul>
@@ -77,29 +104,54 @@
           </div>
         </li>
       </ul>
-
     </div>
 
-    <div class="description-user">
-      <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsam nulla molestiae, beatae assumenda labore, recusandae incidunt numquam. Beatae ipsam fuga iure est autem optio ipsum explicabo, natus incidunt inventore..</p>
+
+      <div class="divider teal accent-2" style="width: 80%; margin: auto;"></div>
+      <div class="section">
+        <h5 class="title-experiences teal-text text-accent-2">Previous experience</h5>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maxime deserunt dolor saepe, aut qui, enim earum!
+      </div>
+      <div class="divider teal accent-2" style="width: 80%; margin: auto;"></div>
+      <div class="section">
+        <h5 class="title-education teal-text text-accent-2">Education</h5>
+        Obcaecati deserunt dicta nulla quas expedita doloremque dolores ipsum placeat laborum perspiciatis? Voluptates!
+      </div>
+      <div class="divider teal accent-2" style="width: 80%; margin: auto;"></div>
+      <div class="section">
+        <h5 class="title-hobbies teal-text text-accent-2">Hobbies</h5>
+        Obcaecati deserunt dicta nulla quas expedita doloremque dolores ipsum placeat laborum perspiciatis? Voluptates!
+      </div>
+    </div>
+
+    <div class="divider teal accent-2" style="width: 80%; margin: auto;"></div>
+
+    <div class="description-user" style="width: 65%; margin: auto;">
+      <h5 class="title-description teal-text text-accent-2">
+        About me
+      </h5>
+      <p class="flow-text grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsam nulla molestiae, beatae assumenda labore, recusandae incidunt numquam. Beatae ipsam fuga iure est autem optio ipsum explicabo, natus incidunt inventore..</p>
     </div>
 
     <!-- end of the entire profile -->
   </div>
 
-  <div class="button-swipe">
-    <div class="button-swipe-right">
-      <a class="btn-floating btn-large waves-effect waves-light "><i class="material-icons">done</i></a>
+  <div class="button-swipe valign-wrapper">
+    <div class="row">
+      <div class="col s6">
+        <a class="waves-effect waves-light btn-large white" style="border-color: blue-grey lighten-3;"><i class="material-icons left">not_interested</i><h5 class="teal-text text-accent-2">Not Mate</h5></a>
+      </div>
+      <div class="col s6">
+        <a class="waves-effect waves-light teal accent-2 btn-large"><i class="material-icons right">done</i>Mate</a>
+      </div>
     </div>
-    <div class="button-swipe-left">
-      <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">not_interested</i></a>
-    </div>
+
+    <!-- end of the button-swipe -->
   </div>
-
-
 
 <!-- end of container -->
 </div>
+
 
   <footer class="page-footer">
     <div class="footer-copyright">
