@@ -10,11 +10,9 @@ class MatchesController < ApplicationController
     @user_b = User.find(params[:user_id])
     if @match = Match.swipe_right(user_a, user_b)
     else
-      #redirect
+      # redirect
     end
   end
 
 private
-
-
 end
