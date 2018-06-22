@@ -1,5 +1,5 @@
 <div class="container">
-
+<%= render "shared/navbars/home" %>
   <div class="row">
     <% @users.each do |user| %>
       <%= render 'shared/user-card', user: user %>
