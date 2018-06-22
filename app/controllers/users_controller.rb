@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  def index
-    @users = User.all
+  def my_profile
+    @user = current_user
+    render "show"
   end
 
   def show
@@ -11,11 +12,5 @@ class UsersController < ApplicationController
 
   def setting
     @user = current_user
-    render "setting"
-  end
-
-  def profile
-    @user = current_user
-    render "show"
   end
 end
