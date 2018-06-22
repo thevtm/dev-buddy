@@ -1,7 +1,9 @@
-
 <div class="container z-depth-3 center-align white" style="border-radius: 10px; margin-bottom: 30px;">
-  <%= render "shared/navbars/profile" %>
-
+  <% if @user != current_user %>
+    <%= render "shared/navbars/home" %>
+  <% else %>
+    <%= render "shared/navbars/profile" %>
+  <% end %>
   <div class="user-partial-profil">
     <div class="col s12">
       <div class="collection-item avatar" style="padding-top: 30pt;">

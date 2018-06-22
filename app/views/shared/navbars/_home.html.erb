@@ -1,7 +1,13 @@
-<div class="navbar-devbuddy">
+<nav>
+  <div class="nav-wrapper home">
 
-  <%= link_to "Profile", users_path, class: "navbar-devbuddy__link" %>
-  <%= link_to "Match", matches_path, class: "navbar-devbuddy__link" %>
-  <%= link_to "Chat", contacts_path, class: "navbar-devbuddy__link" %>
+    <ul class="left">
+      <li><%= link_to "Profile", profile_user_path %></li>
+    </ul>
 
-</div>
+    <ul class="right">
+      <li><%= link_to "Chats", inbox_chat_path %></li>
+    </ul>
+
+  </div>
+</nav>
