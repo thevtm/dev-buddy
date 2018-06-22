@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  devise_for :users
+  devise_for :users, controllers: {registrations: :registrations}
 
   get "users/setting", to: "users#setting", as: :setting_user
   get "users/profile", to: "users#profile", as: :profile_user
