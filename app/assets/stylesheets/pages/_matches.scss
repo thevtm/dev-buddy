@@ -1,0 +1,21 @@
+.match-footer__nav {
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 5px;
+  background-color: gray;
+  justify-content: space-between;
+}
+
+.match-footer__pass {
+  margin-left: 10px;
+}
+
+.match-footer__meet {
+  margin-right: 10px;
+}
+
+.its-a-match {
+  display: none;
+}
