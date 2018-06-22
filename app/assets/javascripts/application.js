@@ -1,3 +1,4 @@
-// = require rails-ujs
-// = require_tree .
-// = require materialize
+//= require rails-ujs
+//= require jquery
+//= require materialize
+//= require_tree .

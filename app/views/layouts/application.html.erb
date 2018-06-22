@@ -14,16 +14,14 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <%= render 'layouts/navbar' %>
-
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
     <%= yield %>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>
 
