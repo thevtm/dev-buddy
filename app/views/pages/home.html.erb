@@ -1,32 +1,18 @@
-<!-- <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "weed_golfers" %>');">
-  <div class="banner-content">
-    <h1> .DevBuddy </h1>
-    <p>Meet the smartest nerds around you</p>
-    <%= link_to new_user_registration_path, class: "btn btn-primary btn-md" do %>
-      <div> Sign up now </div>
-    <% end %>
-  </div>
-</div>
-
- -->
-
   <div class="carousel carousel-slider center">
     <div class="carousel-fixed-item center">
-      <%= link_to new_user_registration_path, class: "btn waves-effect white grey-text darken-text-2" do %>
-        <div> Sign Up Now </div>
-      <% end %>
+      <%= link_to "Join Now", new_user_registration_path, class: "btn waves-effect white grey-text darken-text-2" %>
+      <%= link_to "Sign In", users_path, class: "btn waves-effect white grey-text darken-text-2" %>
     </div>
+
 <!--     <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "weed_golfers" %>');">
       <h2> .DevBuddy </h2>
       <p class="white-text">Meet the smartest nerds around you</p>
     </div> -->
 
-    <div class="carousel-item">
-      <img src="url('<%= image_path "weed_golfers" %>');", alt="">
+    <div class="carousel-item teal white-text">
       <h2> .DevBuddy </h2>
       <p class="white-text">Meet the smartest nerds around you</p>
     </div>
-
     <div class="carousel-item amber white-text" href="#two!">
       <h2> Describe your interest and goals </h2>
       <p class="white-text">Blah blah blah blah blah ....</p>
@@ -36,3 +22,4 @@
       <p class="white-text">Blah blah blah blah blah ....</p>
     </div>
   </div>
+
