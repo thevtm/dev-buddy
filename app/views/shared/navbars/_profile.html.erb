@@ -2,11 +2,11 @@
 <ul id="dropdown1" class="dropdown-content">
   <li><a href="#!">Account</a></li>
   <li><%= link_to "Edit", edit_user_registration_path %></li>
-  <li><%= link_to "Logout", destroy_user_session_path %></li>
+  <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 </ul>
 
 <nav>
-  <div class="nav-wrapper">
+  <div class="nav-wrapper profile-nav">
 
     <a href="#" class="brand-logo">Me</a>
 
