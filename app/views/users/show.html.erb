@@ -1,9 +1,10 @@
-<div class="container z-depth-3 center-align white" style="border-radius: 10px; margin-bottom: 30px;">
-  <% if @user != current_user %>
-    <%= render "shared/navbars/home" %>
-  <% else %>
-    <%= render "shared/navbars/profile" %>
-  <% end %>
+<% if @user != current_user %>
+  <%= render "shared/navbars/home" %>
+<% else %>
+  <%= render "shared/navbars/profile" %>
+<% end %>
+
+<div class="center-align white" style="border-radius: 10px; margin-bottom: 30px;">
   <div class="user-partial-profil">
     <div class="col s12">
       <div class="collection-item avatar" style="padding-top: 30pt;">
@@ -34,7 +35,6 @@
       </div>
     </div>
 
-    <!-- end of the partial profile -->
   </div>
 
 
@@ -44,6 +44,7 @@
 
     <div class="chip-user" style="margin-top: 30px; margin-bottom: 30px;">
       <ul>
+
         <li>
           <div class="chip">
             Rust
@@ -58,6 +59,7 @@
             <i class="close material-icons"></i>
           </div>
         </li>
+
         <li>
           <div class="chip">
             Rails
@@ -68,6 +70,7 @@
             <i class="close material-icons"></i>
           </div>
         </li>
+
         <li>
           <div class="chip">
             Full stack
@@ -82,6 +85,7 @@
             <i class="close material-icons"></i>
           </div>
         </li>
+
       </ul>
     </div>
 
@@ -89,6 +93,7 @@
 
 
     <div class="row goal-user" style="margin-top: 30px; margin-bottom: 30px;">
+
       <div class="col s4">
         <div class="goal-user-network">
           <img class="goal-user-network-image responsive-img" style="width: 75px; height: 75px;" src= '<%= image_path "network.svg" %>'>
@@ -109,7 +114,7 @@
           <h6 class="goal-user-network-text flow-text grey-text">Freelance</h6>
         </div>
       </div>
-      <!-- end of goal user -->
+
     </div>
 
 
@@ -130,7 +135,6 @@
         <h5 class="title-hobbies teal-text text-accent-2">Hobbies</h5>
         Obcaecati deserunt dicta nulla quas expedita doloremque dolores ipsum placeat laborum perspiciatis? Voluptates!
       </div>
-      <!-- end of background user -->
     </div>
 
     <div class="divider teal accent-2" style="width: 80%; margin: auto;"></div>
@@ -142,32 +146,8 @@
       <p class="flow-text grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsam nulla molestiae, beatae assumenda labore, recusandae incidunt numquam. Beatae ipsam fuga iure est autem optio ipsum explicabo, natus incidunt inventore..</p>
     </div>
 
-    <!-- end of the entire profile -->
   </div>
 
-  <div class="button-swipe valign-wrapper">
-    <div class="row">
-      <div class="col s6">
-        <a class="waves-effect waves-light btn-large white" style="border-color: blue-grey lighten-3;"><i class="material-icons left">not_interested</i><h5 class="teal-text text-accent-2">Not Mate</h5></a>
-      </div>
-      <div class="col s6">
-        <a class="waves-effect waves-light teal accent-2 btn-large"><i class="material-icons right">done</i>Mate</a>
-      </div>
-    </div>
 
-    <!-- end of the button-swipe -->
-  </div>
-
-<!-- end of container -->
 </div>
-
-
-  <footer class="page-footer white">
-    <div class="footer-copyright white">
-      <div class="container">
-      © 2018 Copyright Text
-      <a class="grey-text right" href="#!">© 2018 DevBuddy Amazing Team</a>
-      </div>
-    </div>
-  </footer>
 
