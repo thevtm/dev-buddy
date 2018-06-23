@@ -53,7 +53,7 @@
 
 </div>
 
-<div class="match-profile z-depth-3 center-align white" style="border-radius: 10px; margin-bottom: 30px;">
+<div class="match-profile center-align white">
 
   <div class="user-partial-profil">
     <div class="col s12">
@@ -193,23 +193,4 @@
 
 </div>
 
-<div class="match-footer__nav button-swipe valign-wrapper">
-
-  <div class="match-footer__pass col s6">
-    <%= link_to(matches_path, class: "waves-effect waves-light btn-large white") do %>
-      <span class="teal-text text-accent-2">Pass</span>
-    <% end %>
-  </div>
-
-  <div class="match-footer__meet col s6">
-    <%= link_to(
-      matches_path(other_user_id: @user.id),
-      method: :post,
-      class: "waves-effect waves-light teal accent-2 btn-large",
-      remote: true,
-      ) do %>
-      <i class="material-icons right">done</i>Meet
-    <% end %>
-  </div>
-
-</div>
+<%= render "components/match-footer", user: @user %>
