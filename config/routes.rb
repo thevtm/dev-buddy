@@ -4,12 +4,12 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {registrations: :registrations}
 
-  get "users/",        to: "users#my_profile", as: :my_profile_user
-  get "users/setting", to: "users#setting",    as: :setting_user
-  get "users/:id",     to: "users#show",       as: :profile_user
+  get "my_profile/", to: "users#my_profile", as: :my_profile_user
+  get "setting/",    to: "users#setting",    as: :setting_user
+  get "users/:id",   to: "users#show",       as: :profile_user
 
-  get  "matches/", to: "matches#index", as: :matches
-  post "matches/", to: "matches#create"
+  get  "match/", to: "matches#index", as: :matches
+  post "match/", to: "matches#create"
 
   get  "chat/",         to: "chat#inbox",        as: :inbox_chat
   get  "chat/:id",      to: "chat#room",         as: :room_chat
