@@ -2,8 +2,8 @@ import Typed from 'typed.js';
 
 function loadDynamicBannerText() {
   new Typed('#banner-typed-text', {
-    strings: ["Easy and Fast way to", "Meet the nerds around you"],
-    typeSpeed: 70,
+    strings: ["Meet other nerds around you", "Get inspired", "Collaborate", "Learn"],
+    typeSpeed: 60,
     loop: true
   });
 }
