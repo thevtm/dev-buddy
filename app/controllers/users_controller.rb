@@ -13,4 +13,8 @@ class UsersController < ApplicationController
   def setting
     @user = current_user
   end
+
+  def user_params
+    params.require(:user).permit(:name, :location, :profile_picture)
+  end
 end

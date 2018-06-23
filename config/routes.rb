@@ -4,8 +4,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {registrations: :registrations}
 
+  get "users/",      to: "users#my_profile", as: :users
   get "my_profile/", to: "users#my_profile", as: :my_profile_user
-  get "setting/",    to: "users#setting",    as: :setting_user
+  get "settings/",   to: "users#setting",    as: :settings_user
   get "users/:id",   to: "users#show",       as: :profile_user
 
   get  "match/", to: "matches#index", as: :matches

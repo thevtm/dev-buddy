@@ -1,5 +1,12 @@
+.chat-room {
+  display: flex;
+  height: calc(100vh - 44px);
+  flex-direction: column;
+}
+
 .chat-room__header {
   display: flex;
+  width: 100%;
   padding: 5px;
   background-color: #fafafa;
   justify-content: space-between;
@@ -12,20 +19,49 @@
 
 .chat-room__box {
   background-color: #f0f0f0;
+  overflow: scroll;
+  padding: 10px;
+  flex: 1 1 auto;
 }
 
 .chat-room__form {
   display: flex;
+  width: 100%;
+  padding: 5px;
+  align-items: center;
 }
 
-.chat-inbox__message {
-  background-color: #ffffff;
+.chat-room__message-input {
+  margin-bottom: 0 !important;
 }
 
-.chat-inbox__message--me {
+.chat-room__message-send {
+  height: 100%;
+}
+
+.chat_room_message_message {
+  flex: 1 0 auto;
+}
+
+.chat-room__message {
+  padding: 0 3px;
+  border-radius: 4px;
+}
+
+.chat-room__message--me {
+  background-color: rgb(185, 185, 248);
+}
+
+.chat-room__message--not-me {
+  background-color: white;
+}
+
+.chat-room__message-box {}
+
+.chat-room__message-box--me {
   text-align: right;
 }
 
-.chat-inbox__message--not-me {
+.chat-room__message-box--not-me {
   text-align: left;
 }
