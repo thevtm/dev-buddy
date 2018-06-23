@@ -15,14 +15,16 @@
   <div class="chat-room__box">
     <% @chat_room.messages.each do |message| %>
       <% user_is_me = message.user == current_user %>
-      <div class="chat-room__message <%= user_is_me ? "chat-inbox__message--me" : "chat-inbox__message--not-me" %>">
-        <%= message.message %>
+      <div class="chat-room__message-box <%= user_is_me ? "chat-room__message-box--me" : "chat-room__message-box--not-me" %>">
+        <span class="chat-room__message <%= user_is_me ? "chat-room__message--me" : "chat-room__message--not-me" %>">
+          <%= message.message %>
+        </span>
       </div>
     <% end %>
   </div>
 
   <%= simple_form_for @message, url: send_message_chat_path(@chat_room, format: :json), remote: true, html: { class: "chat-room__form" } do |f| %>
-    <%= f.input :message, input_html: { class: "chat-room__message-input" } %>
+    <%= f.input :message, input_html: { class: "chat-room__message-input" }, label: false %>
     <%= f.button :submit, value: ">", input_html: { class: "chat-room__message-send" } %>
   <% end %>
 
