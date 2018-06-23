@@ -11,5 +11,5 @@ class User < ApplicationRecord
   validates :location, presence: true
   validates :profile_picture, presence: true
 
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :profile_picture, PhotoUploader
 end
