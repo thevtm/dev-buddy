@@ -24,15 +24,15 @@ User.destroy_all
 
 puts "Starting seed..."
 30.times do
-  User.create!(
+  user = User.new(
     email: Faker::Internet.email,
     password: "111111",
     password_confirmation: "111111",
     name: Faker::Name.name,
-    location: Faker::Address.country,
-    remote_profile_picture_url: "http://loremflickr.com/720/486/face"
+    location: Faker::Address.country
   )
-
+  user.remote_profile_picture_url = photo_url_array.sample
+  user.save!
 end
 
 puts "Finished creating users..."
@@ -59,8 +59,10 @@ test_user_a = User.create!(
   password_confirmation: "111111",
   name: "Test A",
   location: "Jakarta",
-  remote_profile_picture_url: "http://loremflickr.com/720/486/face"
 )
+test_user_a.remote_profile_picture_url = photo_url_array.sample
+test_user_a.save!
+
 
 test_user_b = User.create!(
   email: "b@b.b",
@@ -68,8 +70,10 @@ test_user_b = User.create!(
   password_confirmation: "111111",
   name: "Test B",
   location: "Tokyo",
-  remote_profile_picture_url: "http://loremflickr.com/720/486/face"
   )
+test_user_b.remote_profile_picture_url = photo_url_array.sample
+test_user_b.save!
+
 
 Match.create!(
   user_a_id: test_user_a.id,
