@@ -53,7 +53,7 @@ puts "Finished creating matches..."
 # Test #
 ########
 
-test_user_a = User.create!(
+test_user_a = User.new(
   email: "a@a.a",
   password: "111111",
   password_confirmation: "111111",
@@ -63,8 +63,7 @@ test_user_a = User.create!(
 test_user_a.remote_profile_picture_url = photo_url_array.sample
 test_user_a.save!
 
-
-test_user_b = User.create!(
+test_user_b = User.new(
   email: "b@b.b",
   password: "111111",
   password_confirmation: "111111",
@@ -73,7 +72,6 @@ test_user_b = User.create!(
   )
 test_user_b.remote_profile_picture_url = photo_url_array.sample
 test_user_b.save!
-
 
 Match.create!(
   user_a_id: test_user_a.id,
