@@ -39,14 +39,6 @@ ActiveRecord::Schema.define(version: 2018_06_23_160808) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "contacts", force: :cascade do |t|
-    t.integer "user_a_id", null: false
-    t.integer "user_b_id", null: false
-    t.datetime "last_activity", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "matches", force: :cascade do |t|
     t.integer "user_a_id", null: false
     t.integer "user_b_id", null: false
