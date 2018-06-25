@@ -19,8 +19,9 @@ gem "uglifier"
 gem "webpacker"
 gem "devise"
 gem "faker"
+gem "cloudinary"
+gem 'carrierwave', '~> 1.2'
 
-gem "materialize-sass", "~> 1.0.0.rc1"
 gem "material_icons"
 
 gem "rubocop"

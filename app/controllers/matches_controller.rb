@@ -2,17 +2,17 @@
 
 class MatchesController < ApplicationController
   def index
+    @user = User.where.not(id: current_user.id).order(Arel.sql("RANDOM()")).first
   end
-
 
   def create
     @user_a = current_user
-    @user_b = User.find(params[:match][:user_b_id])
+    @user_b = User.find(params[:other_user_id])
+
     if @match = Match.swipe_right(@user_a, @user_b)
-      redirect_to user_match_path(current_user, @match)
+      render json: { match: true }
     else
-      next_user = User.where.not(id: current_user.id).order(Arel.sql("RANDOM()")).first
-      redirect_to user_path(next_user)
+      render json: { match: false }
     end
   end
 
@@ -21,6 +21,5 @@ class MatchesController < ApplicationController
   end
 
 private
-
 
 end

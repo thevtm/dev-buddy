@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  def index
-    @users = User.all
+  def my_profile
+    @user = current_user
+    render "show"
   end
 
   def show
@@ -12,6 +13,9 @@ class UsersController < ApplicationController
 
   def setting
     @user = current_user
-    render "setting"
+  end
+
+  def user_params
+    params.require(:user).permit(:name, :location, :profile_picture)
   end
 end

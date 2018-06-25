@@ -1,3 +1,5 @@
+<%= render "shared/navbars/main" %>
+
 <div class="chat-inbox">
 
   <% @chat_rooms.each do |chat_room| %>
@@ -5,22 +7,24 @@
     <% other_user = chat_room.users.where.not(id: current_user.id).first %>
     <% last_message = chat_room.messages.last %>
 
-    <div class="chat-inbox__card">
+    <%= link_to room_chat_path(chat_room) do %>
+      <div class="chat-inbox__card">
 
-      <picture class="chat-inbox__avatar">
-        <img src="http://via.placeholder.com/50x50">
-      </picture>
+        <picture class="chat-inbox__avatar">
+          <img src="http://via.placeholder.com/50x50">
+        </picture>
 
-      <div class="chat-inbox__details">
-        <div class="chat-inbox__details-top">
-          <div class="chat-inbox__user-name"><%= other_user.name %></div>
-          <div class="chat-inbox__message-datetime"><%= other_user.created_at %></div>
+        <div class="chat-inbox__details">
+          <div class="chat-inbox__details-top">
+            <div class="chat-inbox__user-name"><%= other_user.name %></div>
+            <div class="chat-inbox__message-datetime"><%= other_user.created_at %></div>
+          </div>
+
+          <div class="chat-inbox__message"><%= last_message.message %></div>
         </div>
 
-        <div class="chat-inbox__message"><%= last_message.message %></div>
       </div>
-
-    </div>
+    <% end %>
 
   <% end %>
 

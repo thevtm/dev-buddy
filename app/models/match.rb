@@ -13,8 +13,15 @@ class Match < ApplicationRecord
   def self.swipe_right(user_a, user_b)
     match = Match.new(user_a: user_a, user_b: user_b, match: true)
     match.save!
-    reversed_match = Match.where(user_a: user_b, user_b: user_a, match: true).first
-    if reversed_match
+
+    its_a_match = Match.where(user_a: user_b, user_b: user_a, match: true).first
+
+    if its_a_match
+      ch = ChatRoom.create!()
+
+      ChatRoomUser.create!(chat_room: ch, user: user_a)
+      ChatRoomUser.create!(chat_room: ch, user: user_b)
+
       return match
     end
   end
@@ -23,7 +30,7 @@ class Match < ApplicationRecord
 
     def users_must_be_different
       if user_a == user_b
-        errors.add(user_b, "cannot be the same as user")
+        errors.add(:user_b, "cannot be the same as user")
       end
     end
 end
