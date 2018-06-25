@@ -20,7 +20,7 @@ gem "webpacker"
 gem "devise"
 gem "faker"
 gem "cloudinary"
-gem 'carrierwave', '~> 1.2'
+gem "carrierwave", "~> 1.2"
 
 gem "material_icons"
 
