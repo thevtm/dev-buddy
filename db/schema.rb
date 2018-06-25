@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2018_06_25_101744) do
   create_table "chat_room_messages", force: :cascade do |t|
     t.bigint "chat_room_id"
     t.bigint "user_id"
-    t.text "message"
+    t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chat_room_id"], name: "index_chat_room_messages_on_chat_room_id"
@@ -35,14 +35,6 @@ ActiveRecord::Schema.define(version: 2018_06_25_101744) do
   end
 
   create_table "chat_rooms", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "contacts", force: :cascade do |t|
-    t.integer "user_a_id", null: false
-    t.integer "user_b_id", null: false
-    t.datetime "last_activity", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
