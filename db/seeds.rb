@@ -4,6 +4,7 @@ ChatRoom.destroy_all
 Match.destroy_all
 User.destroy_all
 
+puts "Starting seed..."
 30.times do
   User.create!(
     email: Faker::Internet.email,
@@ -11,9 +12,13 @@ User.destroy_all
     password_confirmation: "111111",
     name: Faker::Name.name,
     location: Faker::Address.country,
-    profile_picture: Faker::Name.name,
+    remote_profile_picture_url: "http://loremflickr.com/720/486/face"
   )
+
+
 end
+
+puts "Finished creating users..."
 
 10.times do
   user_a = User.order(Arel.sql("RANDOM()")).first
@@ -25,6 +30,8 @@ end
   )
 end
 
+puts "Finished creating matches..."
+
 ########
 # Test #
 ########
@@ -35,7 +42,7 @@ test_user_a = User.create!(
   password_confirmation: "111111",
   name: "Test A",
   location: "Jakarta",
-  profile_picture: "photo_a",
+  remote_profile_picture_url: "http://loremflickr.com/720/486/face"
 )
 
 test_user_b = User.create!(
@@ -44,8 +51,8 @@ test_user_b = User.create!(
   password_confirmation: "111111",
   name: "Test B",
   location: "Tokyo",
-  profile_picture: "photo_b",
-)
+  remote_profile_picture_url: "http://loremflickr.com/720/486/face"
+  )
 
 Match.create!(
   user_a_id: test_user_a.id,
