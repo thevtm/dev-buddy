@@ -1,5 +1,23 @@
 require 'faker'
 
+photo_url_array = [
+  "https://avatars0.githubusercontent.com/u/12168698?v=4",
+  "https://avatars1.githubusercontent.com/u/36988303?v=4",
+  "https://avatars2.githubusercontent.com/u/29202119?v=4",
+  "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/s2qpazzl5jm5xrngln1j.jpg",
+  "https://avatars1.githubusercontent.com/u/20646607?v=4",
+  "https://avatars1.githubusercontent.com/u/38414138?v=4",
+  "https://avatars3.githubusercontent.com/u/37291361?v=4",
+  "https://avatars2.githubusercontent.com/u/38267204?v=4",
+  "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/msmtmeifg0x1knic8qrv.jpg",
+  "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/oevq0muhshxykwqhq466.jpg",
+  "https://avatars2.githubusercontent.com/u/10833329?v=4",
+  "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/tns0dv1jdzeffoqjbq4v.jpg",
+  "https://avatars1.githubusercontent.com/u/37129269?v=4",
+  "https://avatars2.githubusercontent.com/u/978715?v=4",
+  "https://avatars2.githubusercontent.com/u/10217979?v=4"
+]
+
 ChatRoom.destroy_all
 Match.destroy_all
 User.destroy_all
@@ -11,8 +29,12 @@ User.destroy_all
     password_confirmation: "111111",
     name: Faker::Name.name,
     location: Faker::Address.country,
-    profile_picture: Faker::Name.name,
+    # profile_picture: Faker::Name.name,
+    # profile_picture: user.profile_picture,
   )
+  user = User.new
+  user.remote_photo_url = photo_url_array.sample
+  user.save!
 end
 
 10.times do

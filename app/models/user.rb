@@ -9,5 +9,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :location, presence: true
-  validates :profile_picture, presence: true
+  # validates :profile_picture, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end
