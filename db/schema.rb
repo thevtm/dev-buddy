@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_23_160808) do
+ActiveRecord::Schema.define(version: 2018_06_25_101744) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2018_06_23_160808) do
   create_table "chat_room_messages", force: :cascade do |t|
     t.bigint "chat_room_id"
     t.bigint "user_id"
-    t.string "message"
+    t.text "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chat_room_id"], name: "index_chat_room_messages_on_chat_room_id"
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(version: 2018_06_23_160808) do
   end
 
   create_table "chat_rooms", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.integer "user_a_id", null: false
+    t.integer "user_b_id", null: false
+    t.datetime "last_activity", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -63,7 +71,6 @@ ActiveRecord::Schema.define(version: 2018_06_23_160808) do
     t.string "name"
     t.string "location"
     t.string "profile_picture"
-    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

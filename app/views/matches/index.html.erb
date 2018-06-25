@@ -65,12 +65,12 @@
         border-color: #64ffda;
         border-radius: 500px;
         -webkit-border-radius: 500px;
-        -moz-border-radius: 500px;" src= '<%= image_path "gabi.jpg" %>'>
+        -moz-border-radius: 500px;" src= '<%= image_path @user.profile_picture %>'>
       </div>
 
       <div class="title-user teal-text text-accent-2">
         <h3>
-        <span><%= @user.name %></span>
+          <span><%= @user.name %></span>
         </h3>
       </div>
 
@@ -78,7 +78,7 @@
         <ul>
           <li>
             <p>
-            <span class="grey-text"><%= @user.location %></span>
+              <span class="grey-text"><%= @user.location %></span>
             </p>
           </li>
         </ul>
