@@ -1,3 +1,5 @@
+<%  %>
+
 <% if @user != current_user %>
   <%= render "shared/navbars/home" %>
 <% else %>
@@ -5,7 +7,7 @@
 <% end %>
 
 <div class="center-align white">
-  <div class="card user-show__profile-card">
+  <div class="card user-show__profile-card" style="background: url(<%= (cl_image_path @user.profile_picture).gsub('upload', 'upload/e_blur:1000/e_art:quartz') %>) no-repeat center" >
     <div class="user-partial-profile">
       <div class="col s12">
         <div class="user-show__picture-position collection-item avatar">
@@ -21,9 +23,9 @@
         <div>
           <ul>
             <li>
-              <p>
-              <span class="white-text"><%= @user.location %></span>
-              </p>
+              <h5>
+              <span class="user-show__location white-text"><%= @user.location %></span>
+              </h5>
             </li>
           </ul>
         </div>
