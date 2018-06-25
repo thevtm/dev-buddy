@@ -1,11 +1,15 @@
-<div class="navbar-profile">
+<div class="navbar-dev-buddy">
 
-  <%= link_to "Back", matches_path, class: "navbar-profile__link" %>
-
-  <%= link_to settings_user_path, class: "navbar-profile__link" do %>
-    <i class="fas fa-cog"></i>
+  <%= link_to matches_path, class: "navbar-dev-buddy__link" do %>
+   <%= image_tag "icon_back.png" %>
   <% end %>
 
 
+  <%= link_to settings_user_path, class: "navbar-dev-buddy__link" do %>
+    <%= image_tag "icon_settings.png"  %>
+  <% end %>
+
 </div>
+
+<div class="navbar-dev-buddy__spacer"></div>
 
