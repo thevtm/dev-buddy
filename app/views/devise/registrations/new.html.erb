@@ -1,4 +1,4 @@
-<div class="teal accent-2">
+<div class="teal accent-2" style="background-color: #64ffda; ">
   <div class="invisible-layer transparent">
     <div class="container-form teal lighten-5 z-depth-3"
       style="border-radius: 0px 0px 25px 25px;
@@ -12,8 +12,8 @@
 
       <%= render partial: "form", locals: { f: f } %>
 
-        <div class="form-actions" id="submit-button">
-          <%= f.button :submit, "Sign up" %>
+        <div class="form-actions transparent">
+          <%= f.button :submit, "Sign up", id: 'submit-button' %>
         </div>
       <% end %>
 

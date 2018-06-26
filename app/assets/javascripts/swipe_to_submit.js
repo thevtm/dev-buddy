@@ -14,8 +14,10 @@ if (submitButton) {
       v.preventDefault();
       console.log('swipeup')
       containerForm.classList.add('animated', 'slideOutUp')
-      containerForm.on('animationend', () => Rails.fire(submitButton, "click"));
-      console.log('submit form')
+      $(containerForm).on('animationend', () => {
+        console.log('submit form')
+        $(submitButton).click()
+      });
   });
 }
 
