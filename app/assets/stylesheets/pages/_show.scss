@@ -1,10 +1,8 @@
 .network-goal {
-background-color: white;
-
+  background-color: white;
 }
 
 .user-show__profile-outline {
-
   width: 150px;
   height: 150px !important;
   margin: 1px;
@@ -13,18 +11,24 @@ background-color: white;
   border-radius: 500px;
 }
 
-
 .user-show__picture-position {
   padding-top: 30pt;
 }
 
 .user-show__name {
   color: teal;
+  text-shadow: 1.5px 1.5px 2px #404142;
+}
+
+.user-show__location {
+  text-shadow: 1.5px 1.5px 2px #404142;
 }
 
 .user-show__profile-card {
-  background-color: #3e2723;
   padding: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
 }
 
 .user-show__skills-goals {
@@ -45,4 +49,3 @@ background-color: white;
   font-size: 22px;
   color: #ff9800;
 }
-
