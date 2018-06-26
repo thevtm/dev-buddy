@@ -5,16 +5,6 @@
   <%= content_tag :div, class: "chat-room__data hide", data: { otheruserlastmessagedatetime: @other_user_last_message_datetime.iso8601 } do %>
   <% end %>
 
-  <div class="chat-room__header">
-    <picture class="user-avatar user-avatar--small chat-room__avatar">
-      <img src="http://via.placeholder.com/50x50">
-    </picture>
-
-    <div class="chat-room__name">
-      <%= @other_user.name %>
-    </div>
-  </div>
-
   <div class="chat-room__box">
     <% @chat_room.messages.each do |message| %>
       <% user_is_me = message.user == current_user %>
@@ -28,7 +18,8 @@
 
   <%= simple_form_for @message, url: send_message_chat_path(@chat_room, format: :json), remote: true, html: { class: "chat-room__form" } do |f| %>
     <%= f.input :message, input_html: { class: "chat-room__message-input" }, label: false %>
-    <%= f.button :submit, value: ">", input_html: { class: "chat-room__message-send" } %>
+
+    <%= f.button :submit, value: ">", class: "chat-room__message-send" %> <%= image_tag("icon-send-turqoise.png") %>
   <% end %>
 
 </div>

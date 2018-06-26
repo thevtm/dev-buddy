@@ -18,9 +18,10 @@
 }
 
 .chat-room__box {
-  background-color: #f0f0f0;
+  background-color: #50E3C2;
+  background: linear-gradient(to bottom, rgba(80,203,175,0.1), rgba(80,203,175,1));
   overflow: scroll;
-  padding: 10px;
+  padding: 30px;
   flex: 1 1 auto;
 }
 
@@ -29,27 +30,41 @@
   width: 100%;
   padding: 5px;
   align-items: center;
+  background-color: #58cab0;
+}
+
+.chat_room_message_message{
+  width: calc(100% - 20px - 20px);
 }
 
 .chat-room__message-input {
   margin-bottom: 0 !important;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .chat-room__message-send {
   height: 100%;
+  margin-left: -39px;
+  margin-top: -10px;
 }
 
 .chat_room_message_message {
-  flex: 1 0 auto;
+  // flex: 1 0 auto;
 }
 
 .chat-room__message {
   padding: 0 3px;
   border-radius: 4px;
+  display: inline-block;
+  word-break: break-all;
 }
 
 .chat-room__message--me {
-  background-color: rgb(185, 185, 248);
+  background-color: white;
+  margin: 10px 0 10px 0;
+  padding: 5px;
 }
 
 .chat-room__message--not-me {
