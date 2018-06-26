@@ -21,5 +21,4 @@ class MatchesController < ApplicationController
   end
 
 private
-
 end
