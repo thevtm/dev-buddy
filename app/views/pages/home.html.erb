@@ -1,16 +1,22 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url( <%= image_path 'dev_buddies_lewagon.png' %>);">
+
   <div class="banner-content">
-    <h1> .DevBuddy </h1>
+    <div class="landingpage-banner-box">
+      <h1> .DevBuddy </h1>
+      <h4> <span id="banner-typed-text"></h4>
+    </div>
 
-    <h4> <span id="banner-typed-text"></h4>
+    <div class="landingpage-button-area">
+      <%= link_to new_user_registration_path, class: "landingpage-button-signup" do %>
+        <div> Sign Up </div>
+      <% end %>
 
-    <%= link_to new_user_registration_path, class: "btn btn-primary btn-md orange darken-3" do %>
-      <div> Sign up now </div>
-    <% end %>
+      <%= link_to new_user_session_path, class: "landingpage-button-login" do %>
+        <div> Log In </div>
+      <% end %>
+    </div>
 
-    <%= link_to new_user_session_path, class: "btn btn-primary btn-md teal" do %>
-      <div> Login </div>
-    <% end %>
   </div>
+
 </div>
 
