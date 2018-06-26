@@ -1,7 +1,15 @@
 <%= render "shared/navbars/main" %>
 
-<%= render "shared/its-a-match" %>
+<div class="match-mount">
+  <div class="match-mount__wrapper">
+    <div class="match-mount__point match-mount__point--top">
+      <%= render "shared/match", user: @user_a %>
+    </div>
 
-<%= render "shared/profile" %>
+    <div class="match-mount__point match-mount__point--bottom">
+      <%= render "shared/match", user: @user_b %>
+    </div>
+  </div>
+</div>
 
-<%= render "components/match-footer", user: @user %>
+<%= render "components/match-footer" %>

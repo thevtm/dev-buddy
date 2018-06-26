@@ -1,14 +1,18 @@
 <div class="match-profile center-align white">
-  <div class="card user-show__profile-card" style="background: url(<%= (cl_image_path @user.profile_picture).gsub('upload', 'upload/e_blur:800/e_art:incognito') %>) no-repeat center" >
+
+  <%= content_tag :div, class: "match-profile__data hide", data: { user_id: user.id } do %>
+  <% end %>
+
+  <div class="card user-show__profile-card" style="background: url(<%= (cl_image_path user.profile_picture).gsub('upload', 'upload/e_blur:800/e_art:incognito') %>) no-repeat center" >
     <div class="user-partial-profile">
       <div class="col s12">
         <div class="user-show__picture-position collection-item avatar">
-          <img class="user-show__profile-outline avatar-user circle responsive-img z-depth-2 "src= '<%= cl_image_path @user.profile_picture %>'>
+          <img class="user-show__profile-outline avatar-user circle responsive-img z-depth-2 "src= '<%= cl_image_path user.profile_picture %>'>
         </div>
 
         <div>
           <h3>
-          <span class="user-show__name title-user white-text"><%= @user.name %></span>
+          <span class="user-show__name title-user white-text"><%= user.name %></span>
           </h3>
         </div>
 
@@ -16,7 +20,7 @@
           <ul>
             <li>
               <p>
-              <span class="user-show__location white-text"><%= @user.location %></span>
+              <span class="user-show__location white-text"><%= user.location %></span>
               </p>
             </li>
           </ul>

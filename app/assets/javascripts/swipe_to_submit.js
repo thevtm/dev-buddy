@@ -6,11 +6,13 @@ var submitButton = document.getElementById('submit-button');
 
 if (submitButton) {
   var hammertime2 = new Hammer(myElement2, myOptions2);
-  hammertime2.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+  hammertime2.get('swipe').set({
+    direction: Hammer.DIRECTION_ALL
+  });
 
 
   var swipeToSubmit = hammertime2.on('swipeup',
-    function(v) {
+    function (v) {
       v.preventDefault();
       console.log('swipeup')
       containerForm.classList.add('animated', 'slideOutUp')
@@ -18,7 +20,7 @@ if (submitButton) {
         console.log('submit form')
         $(submitButton).click()
       });
-  });
+    });
 }
 
 

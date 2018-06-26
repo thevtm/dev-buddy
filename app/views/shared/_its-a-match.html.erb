@@ -1,4 +1,5 @@
 <div class="its-a-match">
+
   <div class="match-card-image waves-effect waves-block waves-light">
     <div class="match-statement">
       <p style="margin: 25px 0 0 0">You've a match!</p>
@@ -7,25 +8,23 @@
       <div class="match-row-box">
         <div class="match-avatar col s6">
           <img class="match-avatar-user"
-            src= '<%= cl_image_path @user.profile_picture %>'>
+            src= '<%= cl_image_path user.profile_picture %>'>
         </div>
         <div class="match-avatar-name">
-          <p style="margin-top: 0px"> <%= @user.name %> </p>
+          <p style="margin-top: 0px"> <%= user.name %> </p>
         </div>
       </div>
       <div class="match-row-box">
         <div class="match-avatar col s6">
           <img class="match-avatar-user"
-            src= '<%= cl_image_path @current_user.profile_picture %>'>
+            src= '<%= cl_image_path current_user.profile_picture %>'>
         </div>
         <div class="match-avatar-name">
           <p style="margin-top: 0px"> <%= current_user.name %> </p>
         </div>
       </div>
     </div>
-    <!-- End of Match profile picture div -->
   </div>
-
 
   <div class="match-card-content">
     <div class="match-card-send-message">
