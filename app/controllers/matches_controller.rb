@@ -2,17 +2,29 @@
 
 class MatchesController < ApplicationController
   def index
-    @user = User.where.not(id: current_user.id).order(Arel.sql("RANDOM()")).first
+    random_users = User.where.not(id: current_user.id).order(Arel.sql("RANDOM()")).limit(2)
+    @user_a = random_users[0]
+    @user_b = random_users[1]
   end
 
   def create
-    @user_a = current_user
-    @user_b = User.find(params[:other_user_id])
+    user_a = current_user
+    user_b = User.find(params[:other_user_id])
+    is_match = params[:match] == "1"
 
-    if @match = Match.swipe_right(@user_a, @user_b)
-      render json: { match: true }
+    user = new_random_match
+
+    new_match_html = render_to_string(partial: "shared/match", locals: { user: user })
+
+    if is_match
+      if Match.swipe_right(user_a, user_b)
+        create_chat_room(user_a, user_b)
+        render json: { match: true, new_match_html: new_match_html }
+      else
+        render json: { match: false, new_match_html: new_match_html }
+      end
     else
-      render json: { match: false }
+      render json: { match: false, new_match_html: new_match_html }
     end
   end
 
@@ -21,4 +33,21 @@ class MatchesController < ApplicationController
   end
 
 private
+  def new_random_match
+    User.where.not(id: current_user.id).order(Arel.sql("RANDOM()")).first
+  end
+
+  def create_chat_room(user_a, user_b)
+    chat_room = ChatRoom.create!()
+
+    ChatRoomUser.create!(
+      chat_room: chat_room,
+      user: user_a,
+    )
+
+    ChatRoomUser.create!(
+      chat_room: chat_room,
+      user: user_b,
+    )
+  end
 end

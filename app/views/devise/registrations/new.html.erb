@@ -1,17 +1,38 @@
-<div class="container">
+<div class="teal accent-2" style="background-color: #64ffda; ">
+  <div class="invisible-layer transparent">
+    <div class="container-form teal lighten-5 z-depth-3"
+      style="border-radius: 0px 0px 25px 25px;
+      width: 100%;
+      height: 630px;
+      position: relative;
+      z-index: 1;
+      ">
 
-<%= simple_form_for @user do |f| %>
+    <%= simple_form_for @user, html: {id: 'submit-form'} do |f| %>
 
-  <%= render partial: "form", locals: { f: f } %>
+      <%= render partial: "form", locals: { f: f } %>
 
-    <div class="form-actions sign-up-button-format">
-      <%= f.button :submit, "Sign up", class: "btn btn-primary btn-md orange darken-3" %>
+        <div class="form-actions transparent">
+          <%= f.button :submit, "Sign up", id: 'submit-button' %>
+        </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
     </div>
-  <% end %>
-  <div>
-    <div>
-      <p class="sign-up-button-format">or</p>
+    <div class="form-to-swipe teal accent-2" style="
+      position: absolute;
+      padding-top: 50px;
+      z-index: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 15%;
+      ">
+      <div>
+        <i class="material-icons">arrow_drop_up</i>
+        <h5 class="white-text center-align" style="margin: 0px;">Swipe up to submit</h5>
+      </div>
     </div>
-    <div class="form-actions sign-up-button-format"> <%= link_to "Login", new_user_session_path, class: "btn" %> </div>
   </div>
- </div>
+  <!-- end of the page -->
+</div>
+

@@ -1,3 +1,19 @@
 .its-a-match {
   display: none;
 }
+
+.match-mount__wrapper {
+  position: relative;
+}
+
+.match-mount__point {
+  position: absolute;
+}
+
+.match-mount__point--top {
+  z-index: 1;
+}
+
+.match-mount__point--bottom {
+  z-index: 0;
+}
