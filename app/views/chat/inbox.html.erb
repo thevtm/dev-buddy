@@ -11,25 +11,28 @@
       <div class="chat-inbox__card">
 
         <picture class="chat-inbox__avatar">
-          <img src="http://via.placeholder.com/50x50">
+          <%= cl_image_tag other_user.profile_picture %>
         </picture>
 
         <div class="chat-inbox__details">
           <div class="chat-inbox__details-top">
             <div class="chat-inbox__user-name"><%= other_user.name %></div>
-            <div class="chat-inbox__message-datetime"><%= other_user.created_at %></div>
+            <div class="chat-inbox__message-datetime">
+              <% if last_message %>
+                <%= last_message.created_at.strftime("%I:%M %p") %>
+              <% end %>
+            </div>
           </div>
 
-          <div class="chat-inbox__message"><%= last_message.message %></div>
+          <div class="chat-inbox__message">
+            <% if last_message %>
+              <%= last_message.message %>
+            <% end %>
+          </div>
         </div>
 
       </div>
     <% end %>
 
   <% end %>
-
 </div>
-
-
-
-
