@@ -54,6 +54,7 @@
 }
 
 .match-card-content {
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,28 +66,23 @@
   padding: 10px;
   width: 300px;
   color: white;
+  text-align: center;
+}
+
+.match-send-message-empty {
+  width: 10px;
 }
 
 .match-card-send-message {
-  display: inline;
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
-  position: relative;
 }
 
 
 #match-card-button {
   color: white;
   margin: 0px;
-
+  font-size: 20px;
+  letter-spacing: 1.5px;
 }
-
-
-
-          // <img class="avatar-user circle responsive-img z-depth-2 activator" style="
-          //   width: 150px; height: 150px;
-          //   margin: 1px;
-          //   border: 2px solid grey;
-          //   border-color: #64ffda;
-          //   border-radius: 50%;
-          //   -webkit-border-radius: 500px;
-          //   -moz-border-radius: 500px;" src= '<%= image_path "adultw.jpg" %>'>
