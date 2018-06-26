@@ -4,10 +4,14 @@
 
   <%= render partial: "form", locals: { f: f } %>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+    <div class="form-actions sign-up-button-format">
+      <%= f.button :submit, "Sign up", class: "btn btn-primary btn-md orange darken-3" %>
     </div>
   <% end %>
-
-  <%= render "devise/shared/links" %>
+  <div>
+    <div>
+      <p class="sign-up-button-format">or</p>
+    </div>
+    <div class="form-actions sign-up-button-format"> <%= link_to "Login", new_user_session_path, class: "btn" %> </div>
+  </div>
  </div>
