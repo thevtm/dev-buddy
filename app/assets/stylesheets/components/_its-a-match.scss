@@ -1,5 +1,92 @@
 .its-a-match {
-  // display: none;
+  background-color: #333333;
+  margin-top: 0;
+  height: calc(100vh - 44px);
+}
+
+.match-card-image {
+  background-image: url("background-match-page(more-dark-bottom).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50%;
+}
+
+.match-statement {
+  margin-top: 35px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 2px #464849;
+  letter-spacing: 1.5px;
+}
+
+.match-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.match-avatar {
+  margin: 0px;
+  display: block;
+}
+
+.match-avatar-name {
+  text-align: center;
+  color: #50E3C2;
+  font-size: 18px;
+
+}
+
+.match-avatar-user {
+  width: 150px;
+  height: 150px;
+  margin: 1px;
+  border: 5px solid #64ffda;
+  border-radius: 50%;
+}
+
+.match-row-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.match-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.match-card-send-message, .match-card-find-another {
+  margin: auto;
+  border: 2px solid white;
+  padding: 10px;
+  width: 300px;
+  color: white;
+}
+
+.match-card-send-message {
+  display: inline;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 
+#match-card-button {
+  color: white;
+  margin: 0px;
+
+}
+
+
+
+          // <img class="avatar-user circle responsive-img z-depth-2 activator" style="
+          //   width: 150px; height: 150px;
+          //   margin: 1px;
+          //   border: 2px solid grey;
+          //   border-color: #64ffda;
+          //   border-radius: 50%;
+          //   -webkit-border-radius: 500px;
+          //   -moz-border-radius: 500px;" src= '<%= image_path "adultw.jpg" %>'>

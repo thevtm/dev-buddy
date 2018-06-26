@@ -1,54 +1,41 @@
-<div class="its-a-match card hoverable">
-  <div class="card-image waves-effect waves-block waves-light">
-    <div class="row">
-      <div class="col s6 avatar-user-1" style="padding-top: 10px;">
-        <img class="avatar-user circle responsive-img z-depth-2 activator" style="
-          width: 150px; height: 150px;
-          margin: 1px;
-          border: 2px solid grey;
-          border-color: #64ffda;
-          border-radius: 50%;
-          -webkit-border-radius: 500px;
-          -moz-border-radius: 500px;"
-          src= '<%= cl_image_path @user.profile_picture %>'>
-
+<div class="its-a-match">
+  <div class="match-card-image waves-effect waves-block waves-light">
+    <div class="match-statement">
+      <p style="margin: 25px 0 0 0">You've a match!</p>
+    </div>
+    <div class="match-row">
+      <div class="match-row-box">
+        <div class="match-avatar col s6">
+          <img class="match-avatar-user"
+            src= '<%= cl_image_path @user.profile_picture %>'>
+        </div>
+        <div class="match-avatar-name">
+          <p style="margin-top: 0px"> <%= @user.name %> </p>
+        </div>
       </div>
-
-      <div class="col s6 avatar-user-1" style="padding-left: 10px; padding-top: 10px;">
-
-      <img class="avatar-user circle responsive-img z-depth-2 activator" style="
-        width: 150px; height: 150px;
-        margin: 1px;
-        border: 2px solid grey;
-        border-color: #64ffda;
-        border-radius: 50%;
-        -webkit-border-radius: 500px;
-        -moz-border-radius: 500px;"
-        src= '<%= cl_image_path current_user.profile_picture %>'>
+      <div class="match-row-box">
+        <div class="match-avatar col s6">
+          <img class="match-avatar-user"
+            src= '<%= cl_image_path @current_user.profile_picture %>'>
+        </div>
+        <div class="match-avatar-name">
+          <p style="margin-top: 0px"> <%= current_user.name %> </p>
+        </div>
       </div>
     </div>
+    <!-- End of Match profile picture div -->
   </div>
 
-  <div class="card-content">
-    <span class="card-title activator teal-text text-accent-2">
-      <h4 class="teal-text text-accent-2 center-align" style="
-        border: 4px solid grey;
-        border-color: #64ffda;
-        padding: 7%;
-        margin-bottom: 20%;">
-        A new buddy is waiting for you!
-      </h4>
 
-      <i class="material-icons right">more_vert</i>
-    </span>
-
-    <p><a href="#">Send a message</a></p>
-    <p><a href="#">Continue to swipe</a></p>
-  </div>
-
-  <div class="card-reveal">
-    <span class="card-title grey-text text-darken-4">About Dylan<i class="material-icons right">close</i></span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, quis laboriosam harum odit aut quaerat perspiciatis quos ipsam et voluptatum eligendi, sit amet error voluptatem iusto quasi corrupti laborum. Animi!.</p>
+  <div class="match-card-content">
+    <div class="match-card-send-message">
+      <p style="margin: 0px"><a id="match-card-button" href="#">Send a message</a></p>
+      <img src="../../images/icon-message-white.png" alt="">
+    </div>
+    <div class="match-card-find-another">
+      <p style="margin: 0px"><a id="match-card-button" href="#">Find another match</a></p>
+    </div>
+    <!-- End of Match content div -->
   </div>
 
 </div>
