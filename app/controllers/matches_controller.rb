@@ -18,6 +18,7 @@ class MatchesController < ApplicationController
 
     if is_match
       if Match.swipe_right(user_a, user_b)
+        create_chat_room(user_a, user_b)
         render json: { match: true, new_match_html: new_match_html }
       else
         render json: { match: false, new_match_html: new_match_html }
@@ -34,5 +35,19 @@ class MatchesController < ApplicationController
 private
   def new_random_match
     User.where.not(id: current_user.id).order(Arel.sql("RANDOM()")).first
+  end
+
+  def create_chat_room(user_a, user_b)
+    chat_room = ChatRoom.create!()
+
+    ChatRoomUser.create!(
+      chat_room: chat_room,
+      user: user_a,
+    )
+
+    ChatRoomUser.create!(
+      chat_room: chat_room,
+      user: user_b,
+    )
   end
 end
