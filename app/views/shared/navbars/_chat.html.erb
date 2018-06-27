@@ -1,0 +1,11 @@
+<div class="navbar-dev-buddy">
+  <%= link_to inbox_chat_path, class: "navbar-dev-buddy__link navbar-dev-buddy__link--center" do %>
+    <%= image_tag "icon_back.png" %>
+  <% end %>
+  <div class="chat-room__other_user_name">
+    <%= other_user = @chat_room.users.find { |u| u != current_user }.name %>
+  </div>
+  <div></div>
+</div>
+
+<div class="navbar-dev-buddy__spacer"></div>
