@@ -28,7 +28,7 @@ puts "Starting seed..."
     email: Faker::Internet.email,
     password: "111111",
     password_confirmation: "111111",
-    name: Faker::Name.name,
+    name: Faker::Name.first_name,
     location: Faker::Address.country
   )
   user.remote_profile_picture_url = photo_url_array.sample
