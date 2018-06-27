@@ -10,20 +10,25 @@ class Match < ApplicationRecord
 
   validate :users_must_be_different
 
+  def self.swipe_left(user_a, user_b)
+    Match.create!(user_a: user_a, user_b: user_b, match: false)
+  end
+
   def self.swipe_right(user_a, user_b)
-    match = Match.new(user_a: user_a, user_b: user_b, match: true)
-    match.save!
+    match = Match.create!(user_a: user_a, user_b: user_b, match: true)
 
-    its_a_match = Match.where(user_a: user_b, user_b: user_a, match: true).first
-
-    if its_a_match
-      ch = ChatRoom.create!()
-
-      ChatRoomUser.create!(chat_room: ch, user: user_a)
-      ChatRoomUser.create!(chat_room: ch, user: user_b)
-
-      return match
+    if match.its_a_match?
+      ChatRoom.create_private_chat_room(user_a, user_b)
     end
+
+    match
+  end
+
+  def its_a_match?
+    return false unless match
+    other_match = Match.where(user_a: user_b, user_b: user_a).first
+    return false if other_match.nil?
+    other_match.match
   end
 
   private

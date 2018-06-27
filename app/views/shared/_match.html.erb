@@ -1,3 +1,11 @@
-<%= render "shared/its-a-match", user: user %>
+<% if user.nil? == false %>
 
-<%= render "shared/profile", user: user %>
+  <%= render "shared/its-a-match", user: user %>
+
+  <%= render "shared/profile", user: user %>
+
+<% else %>
+
+  <h3>No more users to match!!</h3>
+
+<% end %>
