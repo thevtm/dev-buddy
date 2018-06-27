@@ -15,15 +15,25 @@ photo_url_array = [
   "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/tns0dv1jdzeffoqjbq4v.jpg",
   "https://avatars1.githubusercontent.com/u/37129269?v=4",
   "https://avatars2.githubusercontent.com/u/978715?v=4",
-  "https://avatars2.githubusercontent.com/u/10217979?v=4"
+  "https://avatars2.githubusercontent.com/u/10217979?v=4",
+  "https://avatars0.githubusercontent.com/u/31037203?s=400&v=4",
+  "https://avatars0.githubusercontent.com/u/29884402?s=400&v=4",
+  "https://avatars1.githubusercontent.com/u/9403101?s=400&v=4",
+  "https://avatars1.githubusercontent.com/u/7533706?s=400&v=4",
+  "https://avatars1.githubusercontent.com/u/50518?s=400&v=4",
+  "https://avatars0.githubusercontent.com/u/2265232?s=400&v=4",
+  "https://avatars0.githubusercontent.com/u/12513436?s=400&v=4",
+  "https://avatars1.githubusercontent.com/u/22532?s=400&v=4",
+  "https://avatars1.githubusercontent.com/u/18394029?s=400&v=4",
+  "https://avatars0.githubusercontent.com/u/7393354?s=400&v=4",
+  "https://ca.slack-edge.com/T02NE0241-U8TUMGRC7-b79426e0803a-512",
 ]
 
 ChatRoom.destroy_all
-Match.destroy_all
 User.destroy_all
 
 puts "Starting seed..."
-30.times do
+photo_url_array.map do |photo_url|
   user = User.new(
     email: Faker::Internet.email,
     password: "111111",
@@ -31,23 +41,9 @@ puts "Starting seed..."
     name: Faker::Name.first_name,
     location: Faker::Address.country
   )
-  user.remote_profile_picture_url = photo_url_array.sample
+  user.remote_profile_picture_url = photo_url
   user.save!
 end
-
-puts "Finished creating users..."
-
-10.times do
-  user_a = User.order(Arel.sql("RANDOM()")).first
-
-  Match.create!(
-    user_a_id: user_a.id,
-    user_b_id: User.where.not(id: user_a.id).order(Arel.sql("RANDOM()")).first.id,
-    match: Faker::Boolean.boolean,
-  )
-end
-
-puts "Finished creating matches..."
 
 ########
 # Test #
@@ -57,20 +53,20 @@ test_user_a = User.new(
   email: "a@a.a",
   password: "111111",
   password_confirmation: "111111",
-  name: "Test A",
-  location: "Jakarta",
+  name: "Donald",
+  location: "Washington DC",
 )
-test_user_a.remote_profile_picture_url = photo_url_array.sample
+test_user_a.remote_profile_picture_url = "https://www.skyparksecure.com/blog/wp-content/uploads/2017/04/donald-trump-bankruptcy-lies-r.jpg"
 test_user_a.save!
 
 test_user_b = User.new(
   email: "b@b.b",
   password: "111111",
   password_confirmation: "111111",
-  name: "Test B",
-  location: "Tokyo",
+  name: "Hillary",
+  location: "Trump Tower",
   )
-test_user_b.remote_profile_picture_url = photo_url_array.sample
+test_user_b.remote_profile_picture_url = "http://freebeacon.com/wp-content/uploads/2017/12/Clinton-540x360.jpg"
 test_user_b.save!
 
 Match.create!(
@@ -100,5 +96,11 @@ ChatRoomUser.create!(
 ChatRoomMessage.create!(
   chat_room: test_chat_room,
   user: test_user_a,
-  message: "Hi Test!",
+  message: "Hi, how are you?!",
+)
+
+ChatRoomMessage.create!(
+  chat_room: test_chat_room,
+  user: test_user_b,
+  message: "I finished the assignment!",
 )
