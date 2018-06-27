@@ -1,7 +1,7 @@
 
 <div class="match-profile center-align grey lighten-5">
-  <div class="background-image-wave-two">
-    <div class="user-partial-profile">
+  <div class="background-image">
+    <div class="match-card-image">
       <div class="col s12">
         <div class="user-show__picture-position collection-item avatar">
           <img class="user-show__profile-outline avatar-user circle responsive-img z-depth-2 "src= '<%= cl_image_path @user.profile_picture %>'>
@@ -25,8 +25,8 @@
       </div>
     </div>
     <!-- end of picture and name -->
-    <div class="user-goals-skills">
-      <h5 class="user-goals-skills_header">Skills & interests</h5>
+    <div class="user-goals-skills white">
+      <h5 class="user-goals-skills_header  teal-text text-accent-2">Skills & interests</h5>
       <div>
         <ul>
           <li>
@@ -61,7 +61,7 @@
       </div>
     </div>
     <!-- end of the chips -->
-    <div class="container">
+    <div class="container ">
       <h5 class="user-goals-skills">Goals</h5>
       <div class="row">
         <div class="col s4">
@@ -142,9 +142,20 @@
           <i class="material-icons">filter_drama</i>Testttt
         </div>
         <div class="collapsible-body" style="display: block; background-color: white;">
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat.</span>
+          <ul class="goal-list">
+            <li>
+             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "network.svg" %>'>
+             <p class="flow-text user-show__goal-text"><h5>Networking</h5></p>
+            </li>
+            <li>
+             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "freelance.svg" %>'>
+             <p class="flow-text user-show__goal-text"><h5>Freelance</h5></p>
+            </li>
+            <li>
+             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "objectif.svg" %>'>
+             <p class="flow-text user-show__goal-text"><h5>Freelance</h5></p>
+            </li>
+          </ul>
         </div>
       </li>
     <!-- end of test -->

@@ -40,8 +40,28 @@
 }
 
 .user-show__goal-pics {
-// background: url(<%= (cl_image_path @user.profile_picture).gsub('upload', 'upload/e_blur:800/e_art:incognito') %>)
-// no-repeat: center;
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+.goal-list li {
+  display: block;
+  height: 50px;
+}
+
+.goal-list li h5 {
+  position: relative;
+  top: 20px;
+}
+
+
+
+.match-card-image {
+  background-image: url("background-match-page(more-dark-bottom).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50%;
 }
 
 .background-image-sun {
@@ -68,4 +88,12 @@ background-size: cover;
 background-position: center;
 }
 
+.user-goals-skills_header {
+  margin-top: 0;
+
+}
+.user-goals-skills {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
