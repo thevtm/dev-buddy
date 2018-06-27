@@ -41,8 +41,12 @@
 }
 
 .chat-inbox__message {
+  flex: 1 0 auto;
   margin-bottom: 10px;
   font-family: 'Hind', sans-serif;
   font-size: 13px;
   color: #50E3C2;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
