@@ -12,4 +12,6 @@ class User < ApplicationRecord
   validates :profile_picture, presence: true
 
   mount_uploader :profile_picture, PhotoUploader
+
+  has_many :matches, class_name: "Match", foreign_key: "user_a_id", dependent: :destroy
 end
