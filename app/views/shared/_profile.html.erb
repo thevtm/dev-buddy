@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 
 <div class="match-profile center-align grey lighten-5">
   <div class="background-image">
     <div class="match-card-image">
+  <%= content_tag :div, class: "match-profile__data hide", data: { user_id: user.id } do %>
+  <% end %>
+    <div class="user-partial-profile">
       <div class="col s12">
         <div class="user-show__picture-position collection-item avatar">
-          <img class="user-show__profile-outline avatar-user circle responsive-img z-depth-2 "src= '<%= cl_image_path @user.profile_picture %>'>
+          <img class="user-show__profile-outline avatar-user circle responsive-img z-depth-2 "src= '<%= cl_image_path user.profile_picture %>'>
         </div>
 
         <div>
@@ -17,7 +21,7 @@
           <ul>
             <li>
               <p>
-                <span class="user-show__location white-text"><%= @user.location %></span>
+              <span class="user-show__location white-text"><%= user.location %></span>
               </p>
             </li>
           </ul>

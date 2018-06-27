@@ -1,1 +1,47 @@
 // Specific CSS for your home-page
+.landingpage-button-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landingpage-button-signup {
+  font-size: 18px;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #ed6c21;
+  transition: background 0.3s ease;
+  margin-bottom: 10px;
+  width: 180px;
+}
+
+.landingpage-button-signup:hover {
+  opacity: 1;
+  background: #e0500d;
+  text-decoration: none;
+  color: white;
+}
+
+.landingpage-button-login {
+  font-size: 18px;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #50E3C2;
+  transition: background 0.3s ease;
+  width: 180px;
+}
+
+.landingpage-button-login:hover {
+  opacity: 1;
+  background: #25c4a0;
+  text-decoration: none;
+  color: white;
+}
+
+.landingpage-banner-box {
+  margin-bottom: 30px;
+}
