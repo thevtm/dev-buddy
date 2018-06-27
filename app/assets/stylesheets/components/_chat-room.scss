@@ -38,10 +38,13 @@
 }
 
 .chat-room__message-input {
+  position: relative;
   margin-bottom: 0 !important;
   background-color: white;
   margin-left: 20px;
   margin-right: 20px;
+  bottom: 10px;
+  border: 1.5px solid #E4E4E4;
 }
 
 .chat-room__message-send {
@@ -56,9 +59,10 @@
 
 .chat-room__message {
   padding: 0 3px;
-  border-radius: 4px;
+  border-radius: 1px;
   display: inline-block;
   word-break: break-all;
+  max-width: 80%;
 }
 
 .chat-room__message--me {
@@ -69,6 +73,8 @@
 
 .chat-room__message--not-me {
   background-color: white;
+  margin: 10px 0 10px 0;
+  padding: 5px;
 }
 
 .chat-room__message-box {}
@@ -80,3 +86,13 @@
 .chat-room__message-box--not-me {
   text-align: left;
 }
+
+.chat-room__message-send {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  width: 30px;
+  height: auto;
+  bottom: 23px;
+}
+

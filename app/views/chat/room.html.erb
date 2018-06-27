@@ -18,8 +18,10 @@
 
   <%= simple_form_for @message, url: send_message_chat_path(@chat_room, format: :json), remote: true, html: { class: "chat-room__form" } do |f| %>
     <%= f.input :message, input_html: { class: "chat-room__message-input" }, label: false %>
-
-    <%= f.button :submit, value: ">", class: "chat-room__message-send" %> <%= image_tag("icon-send-turqoise.png") %>
+    <%= image_submit_tag "icon-send-turqoise.png", class: "chat-room__message-send" %></p>
   <% end %>
 
 </div>
+
+
+
