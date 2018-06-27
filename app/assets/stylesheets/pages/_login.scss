@@ -21,15 +21,34 @@ form#new_user {
   align-items: center;
   }
 
+  .login-area {
+    margin-top: 20vh;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    box-shadow: 0px 3px 3px 0px rgba(228,228,228,0.7);
+  }
+
 .login-button {
   width: 50vw;
   margin-top: 15px;
   background-color: #50E3C2;
 }
 
-.login-area {
-  margin-top: 20vh;
-  padding-top: 10px;
-  padding-bottom: 40px;
-  box-shadow: 0px 3px 3px 0px rgba(228,228,228,0.7);
+.signing-up {
+  width: 50vw;
+  margin-top: 15px;
+  background-color: #ffab40;
+  align-item: center !important;
+  color: white !important;
+}
+
+
+
+.or {
+  color: #50E3C2;
+  font-weight: bold;
+}
+
+.color-signup {
+  color: white;
 }
