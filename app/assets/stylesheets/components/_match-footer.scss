@@ -6,11 +6,12 @@
   padding: 5px;
   background-color: gray;
   justify-content: space-between;
+  z-index: 5;
 }
 
-.match-footer__pass {}
+.match-footer__btn-pass {}
 
-.match-footer__meet {}
+.match-footer__btn-meet {}
 
 .match-footer__spacer {
   height: 64px;

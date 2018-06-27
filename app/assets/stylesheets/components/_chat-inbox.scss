@@ -1,7 +1,9 @@
+
 .chat-inbox__card {
   display: flex;
   padding: 10px;
   background-color: #fafafa;
+  margin: 20px 8px;
 }
 
 .chat-inbox__avatar img {
@@ -9,6 +11,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  border: 2px solid #50E3C2;
 }
 
 .chat-inbox__details {
@@ -24,14 +27,22 @@
 }
 
 .chat-inbox__user-name {
-  font-weight: 700;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: #50E3C2;
 }
 
 .chat-inbox__message-datetime {
   font-weight: 100;
+  font-family: 'Hind', sans-serif;
+  color: #50E3C2;
+  font-size: 13px;
+
 }
 
 .chat-inbox__message {
   margin-bottom: 10px;
-  font-size: 0.9em;
+  font-family: 'Hind', sans-serif;
+  font-size: 13px;
+  color: #50E3C2;
 }

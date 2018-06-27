@@ -1,3 +1,4 @@
+<%= render "shared/navbars/signin-login" %>
 <div class="container login-area">
   <h2 class="h1">Log in</h2>
 
@@ -10,5 +11,19 @@
     <div class="form-actions login-box">
       <%= f.button :submit, "Log in", class: "login-button" %>
     </div>
-  <% end %>
+
+    <div class="or">
+      <p>or</p>
+    </div>
+
+      <div class="btn signing-up">
+        <%= link_to new_user_registration_path, class: "color-signup" do %>
+          <div> Sign Up </div>
+        <% end %>
+      </div>
+    <% end %>
 </div>
+
+
+
+
