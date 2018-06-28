@@ -25,7 +25,7 @@ if ($(".match-mount").length > 0) {
       `);
   }
 
-  const match_action = (other_user_id, match) => {
+  const match_action = _.debounce((other_user_id, match) => {
     match = match ? "1" : "0";
     const url = `${window.location.pathname}?${$.param({ other_user_id, match })}`;
 
@@ -38,14 +38,13 @@ if ($(".match-mount").length > 0) {
       })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         remove_match_point_top();
         promote_match_point_bottom();
         append_new_match_point_bottom(data.new_match_html);
         attach_swiper_to_match_point_top();
       })
       .catch((err) => console.error(err));
-  }
+  }, 2000);
 
   const match_pass_action = () => {
     const user_id = get_match_point_top_user_id();
