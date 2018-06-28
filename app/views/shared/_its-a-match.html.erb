@@ -2,7 +2,7 @@
 
   <div class="match-card-image waves-effect waves-block waves-light">
     <div class="match-statement">
-      <p style="margin: 25px 0 0 0">You've a match!</p>
+      <p style="margin: 25px 0 0 0">It's a match!</p>
     </div>
     <div class="match-row">
       <div class="match-row-box">
@@ -27,14 +27,22 @@
   </div>
 
   <div class="match-card-content">
-    <div class="match-card-send-message">
-      <p style="margin: 0px"><a id="match-card-button" href="#">Send a message</a></p>
-      <div class="match-send-message-empty"></div>
-      <%= image_tag("icon-message-white.png") %>
-    </div>
-    <div class="match-card-find-another">
-      <p style="margin: 0px"><a id="match-card-button" href="#">Find another match</a></p>
-    </div>
+    <%= link_to inbox_chat_path, id: "match-card-button" do %>
+      <div class="match-card-send-message">
+        <p style="margin: 0px">
+          <%= link_to "Send a message", inbox_chat_path, id: "match-card-button" %>
+        </p>
+        <div class="match-send-message-empty"></div>
+        <%= image_tag("icon-message-white.png") %>
+      </div>
+    <% end %>
+    <a id="match-card-button" onclick="location.reload();" style="cursor: pointer;">
+      <div class="match-card-find-another">
+        <p style="margin: 0px">
+          Find another match
+        </p>
+      </div>
+    </a>
     <!-- End of Match content div -->
   </div>
 
