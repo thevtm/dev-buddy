@@ -53,7 +53,7 @@ if ($(".match-mount").length > 0) {
       })
       .then((res) => res.json())
       .then((data) => {
-        if (true) {
+        if (data.match) {
           hide_all_match_profile();
           hide_match_footer();
           show_its_a_match();
