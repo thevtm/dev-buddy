@@ -17,6 +17,12 @@
         </div>
 
         <div>
+          <h4>
+            <span class="user-show__name title-user white-text"><%= user.job_position %></span>
+          </h4>
+        </div>
+
+        <div>
           <ul>
             <li>
               <p>
@@ -29,38 +35,35 @@
     </div>
     <!-- end of picture and name -->
     <div class="user-goals-skills white">
-      <h5 class="user-goals-skills_header  teal-text text-accent-2">Skills & interests</h5>
+      <h5 class="user-goals-skills_header  teal-text text-accent-2">Languages</h5>
       <div>
-        <ul>
-          <li>
-            <div class="chip">
-             Rust
-              <i class="close material-icons"></i>
+
+
+
+
+          <div>
+            <% user.technology_summary[:languages].each do |language| %>
+              <div class="chip">
+               <%= language %>
+                <i class="close material-icons"></i>
+              </div>
+            <% end %>
             </div>
-            <div class="chip">
-             Python
-              <i class="close material-icons"></i>
+          </div>
+
+
+          <h5 class="user-goals-skills_header  teal-text text-accent-2">Methodologies</h5>
+
+          <div>
+            <% user.technology_summary[:methodologies].each do |methodologie| %>
+              <div class="chip">
+               <%= methodologie %>
+                <i class="close material-icons"></i>
+              </div>
+            <% end %>
             </div>
-            <div class="chip">
-             NodeJS
-              <i class="close material-icons"></i>
-            </div>
-          </li>
-          <li>
-            <div class="chip">
-             Full stack
-              <i class="close material-icons"></i>
-            </div>
-            <div class="chip">
-             Front-end
-              <i class="close material-icons"></i>
-            </div>
-            <div class="chip">
-             Back-end
-              <i class="close material-icons"></i>
-            </div>
-          </li>
-        </ul>
+          </div>
+
       </div>
     </div>
     <!-- end of the chips -->
@@ -93,24 +96,19 @@
   <!-- Education: -->
 
       <div class="card">
+
         <div class="user-show__card-head">
           <i class="medium material-icons user-show__card-head-icon">school</i>
-          <h5 class="user-show__card-head-header">Education</h6>
+          <h5 class="user-show__card-head-header">Education</h5>
         </div>
 
-        <ul class="user-show__card-list">
-          <li class="user-show__card-body">
-            <h5 class="">Le Wagon Bootcamp</h5>
-          </li>
+        <div class="user-show__card-list">
+          <div class="user-show__card-body">
+            <h5><%= user.education[0][:diploma] %></h5>
+            <p><%= user.education[0][:school] %></p>
+          </div>
 
-          <li class="user-show__card-body">
-            <h5 class="">BSc  Engineering</h5>
-          </li>
-
-          <li class="user-show__card-body">
-            <h5 class="">Ninja school</h5>
-          </li>
-        </ul>
+        </div>
       </div>
 
 

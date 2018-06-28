@@ -37,17 +37,13 @@ class User < ApplicationRecord
 
   MOCK_DATA = {
     job_position: {
-      :match_senior => {
+      :match_senior =>
         'Senior Software Developer',
-      }
-
-      :match_junior => {
+      :match_junior =>
         'Junior Ruby on Rails Developer',
-      }
-
-      :match_database => {
+      :match_database =>
         'Database Developer',
-      }
+
     },
     technology_summary: {
       :match_senior => {
@@ -56,12 +52,12 @@ class User < ApplicationRecord
         software: %w[TIBCO,  Apache, Business Objects],
         systems: %w[Unix, Windows, VAX/VMS, NeXTStep],
         databases: %w[Access, Sybase]
-      }
+      },
       :match_junior => {
         languages: %w[Ruby, SQL],
         methodologies: %w[Prototyping Approach],
         framework: %w[Rails, Bootstrap],
-      }
+      },
 
       :match_database => {
         languages: %w[C++, C#, Java, NodeJS, Visual Basic],
@@ -73,31 +69,26 @@ class User < ApplicationRecord
     },
 
     education: {
-      :match_senior => {
-        ['MS in Information Systems - Carnegie-Mellon University', 'BS in Computer Science - Carnegie-Mellon University']
-      }
+      :match_senior =>
+        [{ diploma: 'MS in Information Systems', school: 'Carnegie-Mellon University'}],
 
-      :match_junior => {
-        ['MS in International Business - Boconni University', 'Le Wagon Bootcamp']
-      }
+      :match_junior =>
+        [{ diploma: 'MS in International Business', school: 'Boconni University'}],
 
-      :match_database => {
-        ['BS in Information Technology (Database Emphasis) - Mannheim  University']
-      }
+      :match_database =>
+        [{ diploma: 'BS in Information Technology', school: 'Mannheim  University'}],
     },
 
     experience: {
-      :match_senior => {
-        ['Director of Software Development, 2014 to Present', 'Senior Software Developer, 2010 to 2014']
-      }
+      :match_senior =>
+        [{ position: 'Director of Software Development', company: 'IBM', time_spend: '2014 to 2016'}],
 
-      :match_junior => {
-        ['Junior Software Developer, 2018 to Present', 'Le Wagon Bootcamp']
-      }
 
-      :match_database => {
-        ['Database Developer, 2016 to Present', 'Junior Database Developer, 2014 to 2016']
-      }
+      :match_junior =>
+        [{ position: 'Junior Software Developer', company: 'Le Wagon', time_spend: '2018 to Present'}],
+
+      :match_database =>
+        [{ position: 'Database Developer', company: 'Oracle', time_spend: '2016 to Present'}],
     },
   }
 end
