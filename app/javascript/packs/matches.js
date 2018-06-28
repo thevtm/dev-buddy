@@ -44,7 +44,7 @@ if ($(".match-mount").length > 0) {
         attach_swiper_to_match_point_top();
       })
       .catch((err) => console.error(err));
-  }, 2000);
+  }, 1000);
 
   const match_pass_action = () => {
     const user_id = get_match_point_top_user_id();
