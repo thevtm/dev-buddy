@@ -1,28 +1,25 @@
 <div class="match-profile center-align grey lighten-5">
+<%= content_tag :div, class: "match-profile__data hide", data: { user_id: user.id } do %> <% end %>
   <div class="background-image-wave-tw">
     <div class="user-partial-profile">
       <div class="user-card-partial  col s12">
+
         <div class="user-show__picture-position collection-item avatar">
           <img class="user-show__profile-outline avatar-user circle responsive-img z-depth-2 ">
         </div>
 
         <div>
-          <h3 class="user-name-font-header">
-            HUgues
-          </h3>
+          <h4>
+            <span class="user-name-font-header"><%= user.name %></span>
+          </h4>
         </div>
 
         <div>
-          <ul>
-            <li>
-              <p>
-                <span class="user-show__location white-text">Paris</span>
-              </p>
-            </li>
-          </ul>
+          <h4>
+            <span class="user-show__name title-user white-text"><%= user.job_position %></span>
+          </h4>
         </div>
-      </div>
-    </div>
+        <span class="user-show__location white-text"><%= user.location %></span>
 
     <div class="divider divider-partial teal accent-2 center-align"></div>
 
@@ -34,39 +31,7 @@
 
       <!-- space -->
         <h5 class="font-header">Skills & interests</h5>
-        <div>
-          <ul>
-            <li>
-              <div class="chip">
-               Rust
-                <i class="close material-icons"></i>
-              </div>
-              <div class="chip">
-               Python
-                <i class="close material-icons"></i>
-              </div>
-              <div class="chip">
-               NodeJS
-                <i class="close material-icons"></i>
-              </div>
-            </li>
-            <li>
-              <div class="chip">
-               Full stack
-                <i class="close material-icons"></i>
-              </div>
-              <div class="chip">
-               Front-end
-                <i class="close material-icons"></i>
-              </div>
-              <div class="chip">
-               Back-end
-                <i class="close material-icons"></i>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+
       <div style="height: 30px;">
       <!-- space -->
 
@@ -127,6 +92,40 @@
           </div>
         </div>
 
+    <div class="user-goals-skills white">
+      <h5 class="user-goals-skills_header  teal-text text-accent-2">Languages</h5>
+      <div>
+          <div>
+            <% user.technology_summary[:languages].each do |language| %>
+              <div class="chip">
+               <%= language %>
+                <i class="close material-icons"></i>
+              </div>
+            <% end %>
+            </div>
+          </div>
+
+
+          <h5 class="user-goals-skills_header  teal-text text-accent-2">Methodologies</h5>
+
+          <div>
+            <% user.technology_summary[:methodologies].each do |methodologie| %>
+              <div class="chip">
+               <%= methodologie %>
+                <i class="close material-icons"></i>
+              </div>
+            <% end %>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <!-- end of the chips -->
+    <div class="container user-show__container">
+  <!-- Goals -->
+
+
+
         <div class="box-test z-depth-2" >
           <div class="collapsible-header" tabindex="0" style="
             outline: none;
@@ -143,35 +142,30 @@
         </div>
       <!-- end of test -->
 
+  <!-- Education: -->
 
-      <!--   <div class="collapsible-header" tabindex="0" style="
-          background-color: turquoise;
-          outline: none;
-          ">
-          <i class="material-icons">filter_drama</i>Education
-        </div>
-        <div class="collapsible-body" style="display: block; background-color: white;">
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat.</span>
+
+      <div class="card">
+
+        <div class="user-show__card-head">
+          <i class="medium material-icons user-show__card-head-icon">school</i>
+          <h5 class="user-show__card-head-header">Education</h5>
         </div>
 
+        <div class="user-show__card-list">
+          <div class="user-show__card-body">
+            <h5><%= user.education[0][:diploma] %></h5>
+            <p><%= user.education[0][:school] %></p>
+          </div>
 
-
-
-        <div class="collapsible-header" tabindex="0" style="
-          background-color: turquoise;
-          outline: none;
-          ">
-          <i class="material-icons">filter_drama</i>Experience
         </div>
-        <div class="collapsible-body" style="display: block; background-color: white;">
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat.</span>
-        </div>
+      </div>
 
-   -->
+
+
+    <!-- Experience: -->
+
+
 
 
   <!--       <div class="background-user">
@@ -197,6 +191,7 @@
           <p class="flow-text grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsam nulla molestiae, beatae assumenda labore, recusandae incidunt numquam. Beatae ipsam fuga iure est autem optio ipsum explicabo, natus incidunt inventore..</p>
         </div>
     <!-- end of user description -->
+
     </div>
   </div>
 </div>
