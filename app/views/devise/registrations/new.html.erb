@@ -1,10 +1,10 @@
 <%= render "shared/navbars/signin-login" %>
-<div class="teal accent-2" style="background-color: #64ffda; ">
+<div class="submit-page teal accent-2">
   <div class="invisible-layer transparent">
-    <div class="container-form teal lighten-5 z-depth-3"
+    <div class="container-form white z-depth-3"
       style="border-radius: 0px 0px 25px 25px;
       width: 100%;
-      height: 630px;
+      height: 590px;
       position: relative;
       z-index: 1;
       ">
@@ -14,11 +14,10 @@
       <%= render partial: "form", locals: { f: f } %>
 
         <div class="form-actions transparent">
-          <%= f.button :submit, "Sign up", id: 'submit-button' %>
+          <%= f.button :submit, "Sign up", id: 'submit-button', :style => "display: none;" %>
         </div>
       <% end %>
 
-      <%= render "devise/shared/links" %>
     </div>
     <div class="form-to-swipe teal accent-2" style="
       position: absolute;
@@ -29,7 +28,6 @@
       height: 15%;
       ">
       <div>
-        <i class="material-icons">arrow_drop_up</i>
         <h5 class="white-text center-align" style="margin: 0px;">Swipe up to submit</h5>
       </div>
     </div>
