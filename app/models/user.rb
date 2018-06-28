@@ -15,24 +15,38 @@ class User < ApplicationRecord
 
   has_many :matches, class_name: "Match", foreign_key: "user_a_id", dependent: :destroy
 
+  def role
+    @role ||= MOCK_DATA[:job_position].keys.sample
+  end
+
   def job_position
+    MOCK_DATA[:job_position][role]
   end
 
   def technology_summary
+    MOCK_DATA[:technology_summary][role]
+  end
+
+  def education
+    MOCK_DATA[:education][role]
+  end
+
+  def experience
+    MOCK_DATA[:experience][role]
   end
 
   MOCK_DATA = {
     job_position: {
       :match_senior => {
-        'Senior Software Developer'
+        'Senior Software Developer',
       }
 
       :match_junior => {
-        'Junior Ruby on Rails Developer'
+        'Junior Ruby on Rails Developer',
       }
 
       :match_database => {
-        'Database Developer'
+        'Database Developer',
       }
     },
     technology_summary: {
@@ -56,6 +70,34 @@ class User < ApplicationRecord
         systems: %w[Unix, Windows, Net Framework, NeXTStep],
         databases: %w[Oracle, MongoDB, SQL Server]
       }
-    }
+    },
+
+    education: {
+      :match_senior => {
+        ['MS in Information Systems - Carnegie-Mellon University', 'BS in Computer Science - Carnegie-Mellon University']
+      }
+
+      :match_junior => {
+        ['MS in International Business - Boconni University', 'Le Wagon Bootcamp']
+      }
+
+      :match_database => {
+        ['BS in Information Technology (Database Emphasis) - Mannheim  University']
+      }
+    },
+
+    experience: {
+      :match_senior => {
+        ['Director of Software Development, 2014 to Present', 'Senior Software Developer, 2010 to 2014']
+      }
+
+      :match_junior => {
+        ['Junior Software Developer, 2018 to Present', 'Le Wagon Bootcamp']
+      }
+
+      :match_database => {
+        ['Database Developer, 2016 to Present', 'Junior Database Developer, 2014 to 2016']
+      }
+    },
   }
 end
