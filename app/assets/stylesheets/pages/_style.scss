@@ -1,3 +1,95 @@
+.user-show__container {
+  margin-bottom: 100px;
+}
+
+.match-profile {
+  width: 100vw;
+}
+
+.user-show__card-head {
+  background-color: #50E3C2;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+ h5{
+  font-size: 30px;
+  font-weight: bold;
+ }
+}
+
+.flow-text {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+}
+
+.user-show__card-head-icon {
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  height: 20px;
+}
+
+.user-show__card-head-header {
+  text-align: center;
+  position: relative;
+  top: 20px;
+}
+
+.user-show__card-body {
+  background-color: white;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  position: relative;
+}
+
+.user-show__card-list {
+  text-align: left;
+  margin-left: 20px;
+  padding-bottom: 25px;
+}
+
+.user-show__card-list .user-show__card-body {
+  list-style-type: initial;
+  list-style-position: inside;
+  font-size: 35px;
+  height: 50px;
+}
+
+.user-show__card-list .user-show__card-body h5 {
+  display: inline;
+  margin-left: 0;
+  top: -2px;
+  font-size: 20px;
+  position: relative;
+  left: -20px;
+}
+
+
+.user-show__card-body-icon {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  height: 35px;
+  color: #00F4CA;
+}
+
+.user-show__card-body-text {
+  position: relative;
+  top: 20px;
+  text-align: left;
+  margin-left: 90px;
+  font-size: 19px;
+}
+
 .network-goal {
   background-color: white;
 }
@@ -22,6 +114,7 @@
 
 .user-show__location {
   text-shadow: 1.5px 1.5px 2px #1a237e;
+  font-size: 22px;
 }
 
 .user-show__profile-card {
@@ -40,8 +133,8 @@
 }
 
 .user-show__goal-pics {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   float: left;
 }
 
