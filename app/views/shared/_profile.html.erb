@@ -1,19 +1,14 @@
-<<<<<<< HEAD
-
 <div class="match-profile center-align grey lighten-5">
-  <div class="background-image">
-    <div class="match-card-image">
-  <%= content_tag :div, class: "match-profile__data hide", data: { user_id: user.id } do %>
-  <% end %>
+  <div class="background-image-wave-tw">
     <div class="user-partial-profile">
-      <div class="col s12">
+      <div class="user-card-partial  col s12">
         <div class="user-show__picture-position collection-item avatar">
-          <img class="user-show__profile-outline avatar-user circle responsive-img z-depth-2 "src= '<%= cl_image_path user.profile_picture %>'>
+          <img class="user-show__profile-outline avatar-user circle responsive-img z-depth-2 ">
         </div>
 
         <div>
-          <h3>
-            <span class="user-show__name title-user white-text"><%= @user.name %></span>
+          <h3 class="user-name-font-header">
+            HUgues
           </h3>
         </div>
 
@@ -21,203 +16,187 @@
           <ul>
             <li>
               <p>
-              <span class="user-show__location white-text"><%= user.location %></span>
+                <span class="user-show__location white-text">Paris</span>
               </p>
             </li>
           </ul>
         </div>
       </div>
     </div>
+
+    <div class="divider divider-partial teal accent-2 center-align"></div>
+
     <!-- end of picture and name -->
-    <div class="user-goals-skills white">
-      <h5 class="user-goals-skills_header  teal-text text-accent-2">Skills & interests</h5>
-      <div>
-        <ul>
-          <li>
-            <div class="chip">
-             Rust
-              <i class="close material-icons"></i>
-            </div>
-            <div class="chip">
-             Python
-              <i class="close material-icons"></i>
-            </div>
-            <div class="chip">
-             NodeJS
-              <i class="close material-icons"></i>
-            </div>
-          </li>
-          <li>
-            <div class="chip">
-             Full stack
-              <i class="close material-icons"></i>
-            </div>
-            <div class="chip">
-             Front-end
-              <i class="close material-icons"></i>
-            </div>
-            <div class="chip">
-             Back-end
-              <i class="close material-icons"></i>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- end of the chips -->
-    <div class="container ">
-      <h5 class="user-goals-skills">Goals</h5>
-      <div class="row">
-        <div class="col s4">
-          <div>
-           <img class="responsive-img user-show__goal-pics" src= '<%= image_path "network.svg" %>'>
-           <p class="flow-text user-show__goal-text">Networking</p>
-          </div>
-        </div>
-        <div class="col s4">
-          <div>
-           <img class="responsive-img user-show__goal-pics" src= '<%= image_path "objectif.svg" %>'>
-           <p class="flow-text user-show__goal-text">Career opportunity</p>
-          </div>
-        </div>
+    <div class="container container-index">
 
-        <div class="col s4">
-          <div>
-           <img class="responsive-img user-show__goal-pics" src= '<%= image_path "freelance.svg" %>'>
-           <p class="flow-text user-show__goal-text">Career opportunity</p>
-          </div>
+
+      <div class="user-goals-skills  z-depth-2">
+
+      <!-- space -->
+        <h5 class="font-header">Skills & interests</h5>
+        <div>
+          <ul>
+            <li>
+              <div class="chip">
+               Rust
+                <i class="close material-icons"></i>
+              </div>
+              <div class="chip">
+               Python
+                <i class="close material-icons"></i>
+              </div>
+              <div class="chip">
+               NodeJS
+                <i class="close material-icons"></i>
+              </div>
+            </li>
+            <li>
+              <div class="chip">
+               Full stack
+                <i class="close material-icons"></i>
+              </div>
+              <div class="chip">
+               Front-end
+                <i class="close material-icons"></i>
+              </div>
+              <div class="chip">
+               Back-end
+                <i class="close material-icons"></i>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-    <!-- end of the icons  -->
-      <div class="col s12 m9">
-        <ul class="collapsible expandable">
-          <li class="active" >
-            <div class="collapsible-header" tabindex="0" style="
-              background-color: turquoise;
-              outline: none;
-              ">
-              <i class="material-icons">filter_drama</i>First
-            </div>
-            <div class="collapsible-body" style="display: block;">
-              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat.</span>
-            </div>
-          </li>
-          <li class="">
-            <div class="divider white"></div>
-            <div class="collapsible-header" tabindex="0" style="
-              background-color: turquoise;
-              outline: none;
-              ">
-              <i class="material-icons">place</i>Second
-            </div>
-            <div class="collapsible-body" style="">
-              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat.</span>
-            </div>
-          </li>
-          <li class="">
-            <div class="divider white"></div>
-            <div class="collapsible-header" tabindex="0" style="
-              background-color: turquoise;
-              outline: none;
-              ">
-              <i class="material-icons">whatshot</i>Third
-            </div>
-            <div class="collapsible-body" style="">
-              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat.</span>
-            </div>
-          </li>
-        </ul>
+      <div style="height: 30px;">
+      <!-- space -->
+
       </div>
-    <!-- end of colapsible -->
+      <!-- end of the chips -->
+        <h5 class="goals-font-header">Goals</h5>
+        <div class="row">
+          <div class="col s4">
+            <div class="user-goals-icon  z-depth-2">
+             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "network.svg" %>'>
+             <p class="user-goals-text">Networking</p>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="user-goals-icon  z-depth-2">
+             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "objectif.svg" %>'>
+             <p class="user-goals-text">Career opportunity</p>
+            </div>
+          </div>
+
+          <div class="col s4">
+            <div class="user-goals-icon  z-depth-2">
+             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "freelance.svg" %>'>
+             <p class="user-goals-text">Career opportunity</p>
+            </div>
+          </div>
+        </div>
+      <!-- end of the icons  -->
+
+
+        <div class="box-test z-depth-2" >
+          <div class="collapsible-header" tabindex="0" style="
+            outline: none;
+            ">
+            <h5 class="box-test-header">
+              Expertise
+            </h5>
+          </div>
+          <div class="box-test-content" style="display: block;">
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.</span>
+          </div>
+        </div>
+
+        <div class="box-test z-depth-2" >
+          <div class="collapsible-header" tabindex="0" style="
+            outline: none;
+            ">
+            <h5 class="box-test-header">
+              Professional Experience
+            </h5>
+          </div>
+          <div class="box-test-content" style="display: block;">
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.</span>
+          </div>
+        </div>
+
+        <div class="box-test z-depth-2" >
+          <div class="collapsible-header" tabindex="0" style="
+            outline: none;
+            ">
+            <h5 class="box-test-header">
+              Experiences
+            </h5>
+          </div>
+          <div class="box-test-content" style="display: block;">
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.</span>
+          </div>
+        </div>
+      <!-- end of test -->
+
+
+      <!--   <div class="collapsible-header" tabindex="0" style="
+          background-color: turquoise;
+          outline: none;
+          ">
+          <i class="material-icons">filter_drama</i>Education
+        </div>
+        <div class="collapsible-body" style="display: block; background-color: white;">
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo consequat.</span>
+        </div>
 
 
 
-      <li class="active" >
+
         <div class="collapsible-header" tabindex="0" style="
           background-color: turquoise;
           outline: none;
           ">
-          <i class="material-icons">filter_drama</i>Testttt
+          <i class="material-icons">filter_drama</i>Experience
         </div>
         <div class="collapsible-body" style="display: block; background-color: white;">
-          <ul class="goal-list">
-            <li>
-             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "network.svg" %>'>
-             <p class="flow-text user-show__goal-text"><h5>Networking</h5></p>
-            </li>
-            <li>
-             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "freelance.svg" %>'>
-             <p class="flow-text user-show__goal-text"><h5>Freelance</h5></p>
-            </li>
-            <li>
-             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "objectif.svg" %>'>
-             <p class="flow-text user-show__goal-text"><h5>Freelance</h5></p>
-            </li>
-          </ul>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo consequat.</span>
         </div>
-      </li>
-    <!-- end of test -->
+
+   -->
 
 
-      <div class="collapsible-header" tabindex="0" style="
-        background-color: turquoise;
-        outline: none;
-        ">
-        <i class="material-icons">filter_drama</i>Education
-      </div>
-      <div class="collapsible-body" style="display: block; background-color: white;">
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.</span>
-      </div>
-      <div class="collapsible-header" tabindex="0" style="
-        background-color: turquoise;
-        outline: none;
-        ">
-        <i class="material-icons">filter_drama</i>Experience
-      </div>
-      <div class="collapsible-body" style="display: block; background-color: white;">
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.</span>
-      </div>
+  <!--       <div class="background-user">
+          <div class="section">
+            <h5 class="user-experience">Experience</h5>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maxime deserunt dolor saepe, aut qui, enim earum!
+          </div>
+          <div class="divider teal accent-2"></div>
+          <div class="section">
+            <h5 class="user-education">Education</h5>
+            Obcaecati deserunt dicta nulla quas expedita doloremque dolores ipsum placeat laborum perspiciatis? Voluptates!
+          </div>
+          <div class="divider teal accent-2"></div>
+        </div> -->
+      <!-- end of background user -->
 
-
-
-
-<!--       <div class="background-user">
-        <div class="section">
-          <h5 class="user-experience">Experience</h5>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maxime deserunt dolor saepe, aut qui, enim earum!
-        </div>
         <div class="divider teal accent-2"></div>
-        <div class="section">
-          <h5 class="user-education">Education</h5>
-          Obcaecati deserunt dicta nulla quas expedita doloremque dolores ipsum placeat laborum perspiciatis? Voluptates!
+
+        <div>
+          <h5 class="user-show__headings">
+            About me
+          </h5>
+          <p class="flow-text grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsam nulla molestiae, beatae assumenda labore, recusandae incidunt numquam. Beatae ipsam fuga iure est autem optio ipsum explicabo, natus incidunt inventore..</p>
         </div>
-        <div class="divider teal accent-2"></div>
-      </div> -->
-    <!-- end of background user -->
-
-      <div class="divider teal accent-2"></div>
-
-      <div>
-        <h5 class="user-show__headings">
-          About me
-        </h5>
-        <p class="flow-text grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsam nulla molestiae, beatae assumenda labore, recusandae incidunt numquam. Beatae ipsam fuga iure est autem optio ipsum explicabo, natus incidunt inventore..</p>
-      </div>
     <!-- end of user description -->
     </div>
   </div>
 </div>
-
-
-
-
