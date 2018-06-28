@@ -1,3 +1,7 @@
+.match-mount__point {
+  background-color: white;
+}
+
 .user-show__container {
   margin-bottom: 100px;
 }
@@ -66,7 +70,7 @@
 
 .user-show__card-list .user-show__card-body h5 {
   display: inline;
-  margin-left: 0;
+  margin-left: 10px;
   top: -2px;
   font-size: 20px;
   position: relative;
