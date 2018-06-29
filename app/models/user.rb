@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+$GLOBAL_RND = 0
+
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
@@ -16,7 +18,12 @@ class User < ApplicationRecord
   has_many :matches, class_name: "Match", foreign_key: "user_a_id", dependent: :destroy
 
   def role
-    @role ||= MOCK_DATA[:job_position].keys.sample
+    unless @role
+      @role = MOCK_DATA[:job_position].keys[$GLOBAL_RND % MOCK_DATA[:job_position].length]
+      $GLOBAL_RND += 1
+    end
+
+    @role
   end
 
   def job_position
@@ -43,8 +50,8 @@ class User < ApplicationRecord
     },
     technology_summary: {
       match_senior: {
-        languages: %w(C++ C# Java Visual_Basic),
-        methodologies: %w(Rapid_Application_Design Spiral_Approach),
+        languages: ["C++", "C#", "Java", "Visual Basic"],
+        methodologies: ["Rapid Application Design", "Spiral Approach"],
         software: %w(TIBCO  Apache Business_Objects),
         systems: %w(Unix Windows VAX/VMS NeXTStep),
         databases: %w(Access Sybase)
@@ -65,36 +72,30 @@ class User < ApplicationRecord
     },
 
     education: {
-      :match_senior =>
-        [{ diploma: 'MS in Information Systems', school: 'Carnegie-Mellon University'},
-          { diploma: 'BS in Computer Science', school: 'Carnegie-Mellon College'}],
+      match_senior:         [{ diploma: "MS in Information Systems", school: "Carnegie-Mellon University" },
+          { diploma: "BS in Computer Science", school: "Carnegie-Mellon College" }],
 
-      :match_junior =>
-        [{ diploma: 'Bootcamp Ruby on Rails', school: 'Le Wagon'},
-          { diploma: 'MS in International Business', school: 'Boconni University'}],
+      match_junior:         [{ diploma: "Bootcamp Ruby on Rails", school: "Le Wagon" },
+          { diploma: "MS in International Business", school: "Boconni University" }],
 
-      :match_database =>
-        [{ diploma: 'MS in Information Systems', school: 'Michigan-Dearborn University'},
-          { diploma: 'BS in Information Technology', school: 'Mannheim  University'}],
+      match_database:         [{ diploma: "MS in Information Systems", school: "Michigan-Dearborn University" },
+          { diploma: "BS in Information Technology", school: "Mannheim  University" }],
     },
 
     experience: {
-      :match_senior =>
-        [{ position: 'Love to code and chat about techy stuff.
+      match_senior:         [{ position: 'Love to code and chat about techy stuff.
 Have been coding since 10 years old, making websites and apps along the way.
-I am also a passionate game player, especially League of Legends', company: 'IBM', time_spend: '2014 to 2016'}
+I am also a passionate game player, especially League of Legends', company: "IBM", time_spend: "2014 to 2016" }
 
         ],
 
 
-      :match_junior =>
-        [{ position: 'I have diverse working experience from startup to corporate world.
+      match_junior:         [{ position: 'I have diverse working experience from startup to corporate world.
 As I work and live, I couldn’t help realizing that software is genuinely revolutionizing the world.
-I really want to be part of this movement, so here I am!', company: 'Le Wagon', time_spend: '2017 to 2018'}],
+I really want to be part of this movement, so here I am!', company: "Le Wagon", time_spend: "2017 to 2018" }],
 
-      :match_database =>
-        [{ position: 'Doing an apprenticeship at IBM, working on permissioned Blockchain.
-Business school background, love to talk about philosophy.', company: 'Oracle', time_spend: '2016 to 2018'}],
+      match_database:         [{ position: 'Doing an apprenticeship at IBM, working on permissioned Blockchain.
+Business school background, love to talk about philosophy.', company: "Oracle", time_spend: "2016 to 2018" }],
     },
   }
 end
