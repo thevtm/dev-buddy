@@ -37,10 +37,9 @@ class User < ApplicationRecord
 
   MOCK_DATA = {
     job_position: {
-      match_senior:         "Senior Software Developer",
-      match_junior:         "Junior Ruby on Rails Developer",
-      match_database:         "Database Developer",
-
+      match_senior: "Senior Software Developer",
+      match_junior: "Junior Ruby on Rails Developer",
+      match_database: "Database Developer",
     },
     technology_summary: {
       match_senior: {
@@ -66,20 +65,36 @@ class User < ApplicationRecord
     },
 
     education: {
-      match_senior:         [{ diploma: "MS in Information Systems", school: "Carnegie-Mellon University" }],
+      :match_senior =>
+        [{ diploma: 'MS in Information Systems', school: 'Carnegie-Mellon University'},
+          { diploma: 'BS in Computer Science', school: 'Carnegie-Mellon College'}],
 
-      match_junior:         [{ diploma: "MS in International Business", school: "Boconni University" }],
+      :match_junior =>
+        [{ diploma: 'Bootcamp Ruby on Rails', school: 'Le Wagon'},
+          { diploma: 'MS in International Business', school: 'Boconni University'}],
 
-      match_database:         [{ diploma: "BS in Information Technology", school: "Mannheim  University" }],
+      :match_database =>
+        [{ diploma: 'MS in Information Systems', school: 'Michigan-Dearborn University'},
+          { diploma: 'BS in Information Technology', school: 'Mannheim  University'}],
     },
 
     experience: {
-      match_senior:         [{ position: "Director of Software Development", company: "IBM", time_spend: "2014 to 2016" }],
+      :match_senior =>
+        [{ position: 'Love to code and chat about techy stuff.
+Have been coding since 10 years old, making websites and apps along the way.
+I am also a passionate game player, especially League of Legends', company: 'IBM', time_spend: '2014 to 2016'}
+
+        ],
 
 
-      match_junior:         [{ position: "Junior Software Developer", company: "Le Wagon", time_spend: "2018 to Present" }],
+      :match_junior =>
+        [{ position: 'I have diverse working experience from startup to corporate world.
+As I work and live, I couldn’t help realizing that software is genuinely revolutionizing the world.
+I really want to be part of this movement, so here I am!', company: 'Le Wagon', time_spend: '2017 to 2018'}],
 
-      match_database:         [{ position: "Database Developer", company: "Oracle", time_spend: "2016 to Present" }],
+      :match_database =>
+        [{ position: 'Doing an apprenticeship at IBM, working on permissioned Blockchain.
+Business school background, love to talk about philosophy.', company: 'Oracle', time_spend: '2016 to 2018'}],
     },
   }
 end
