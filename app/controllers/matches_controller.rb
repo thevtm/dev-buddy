@@ -44,7 +44,12 @@ private
     if next_user_id.nil?
       nil
     else
-      User.find(next_user_id)
+      begin
+        User.find(next_user_id)
+      rescue
+        session[:next_match_list] = nil
+        next_match
+      end
     end
   end
 
