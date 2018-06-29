@@ -72,7 +72,7 @@
       <div class="col s4">
         <div class="user-goals-icon-box  z-depth-2">
          <img class="responsive-img user-goals-icon" src= '<%= image_path "freelance.svg" %>'>
-         <p class="user-goals-text">Career opportunity</p>
+         <p class="user-goals-text">Freelance</p>
        </div>
       </div>
     </div>
@@ -95,21 +95,23 @@
       </div>
     </div>
 
+
     <div class="box-test z-depth-2" >
       <div class="collapsible-header" tabindex="0" style="
       outline: none;
       ">
         <h5 class="box-test-header">
-          Experience
+          About <%= user.name %>
         </h5>
       </div>
       <div class="box-test-content" style="display: block;">
         <h5><%= user.experience[0][:position] %></h5>
-        <p><%= user.experience[0][:company] %></p>
       </div>
     </div>
   </div>
 <!-- end of user description -->
 </div>
+  <div style="margin-bottom: 30px;">
+  </div>
 
 

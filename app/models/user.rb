@@ -80,16 +80,21 @@ class User < ApplicationRecord
 
     experience: {
       :match_senior =>
-        [{ position: 'Senior Software Development', company: 'IBM', time_spend: '2014 to 2016'}
+        [{ position: 'Love to code and chat about techy stuff.
+Have been coding since 10 years old, making websites and apps along the way.
+I am also a passionate game player, especially League of Legends', company: 'IBM', time_spend: '2014 to 2016'}
 
         ],
 
 
       :match_junior =>
-        [{ position: 'Junior Software Developer', company: 'Le Wagon', time_spend: '2017 to 2018'}],
+        [{ position: 'I have diverse working experience from startup to corporate world.
+As I work and live, I couldn’t help realizing that software is genuinely revolutionizing the world.
+I really want to be part of this movement, so here I am!', company: 'Le Wagon', time_spend: '2017 to 2018'}],
 
       :match_database =>
-        [{ position: 'Junior Database Developer', company: 'Oracle', time_spend: '2016 to 2018'}],
+        [{ position: 'Doing an apprenticeship at IBM, working on permissioned Blockchain.
+Business school background, love to talk about philosophy.', company: 'Oracle', time_spend: '2016 to 2018'}],
     },
   }
 end
