@@ -17,7 +17,7 @@ class MatchesController < ApplicationController
 
     if is_match
       match = Match.swipe_right(user_a, user_b)
-      if match.its_a_match?
+      if true # match.its_a_match?
         create_chat_room(user_a, user_b)
         render json: { match: true, new_match_html: new_match_html }
       else
