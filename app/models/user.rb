@@ -38,7 +38,7 @@ class User < ApplicationRecord
   MOCK_DATA = {
     job_position: {
       :match_senior =>
-        'Senior Software Developer',
+        'Director of Software Developer',
       :match_junior =>
         'Junior Ruby on Rails Developer',
       :match_database =>
@@ -70,25 +70,30 @@ class User < ApplicationRecord
 
     education: {
       :match_senior =>
-        [{ diploma: 'MS in Information Systems', school: 'Carnegie-Mellon University'}],
+        [{ diploma: 'MS in Information Systems', school: 'Carnegie-Mellon University'},
+          { diploma: 'BS in Computer Science', school: 'Carnegie-Mellon College'}],
 
       :match_junior =>
-        [{ diploma: 'MS in International Business', school: 'Boconni University'}],
+        [{ diploma: 'Bootcamp Ruby on Rails', school: 'Le Wagon'},
+          { diploma: 'MS in International Business', school: 'Boconni University'}],
 
       :match_database =>
-        [{ diploma: 'BS in Information Technology', school: 'Mannheim  University'}],
+        [{ diploma: 'MS in Information Systems', school: 'Michigan-Dearborn University'},
+          { diploma: 'BS in Information Technology', school: 'Mannheim  University'}],
     },
 
     experience: {
       :match_senior =>
-        [{ position: 'Director of Software Development', company: 'IBM', time_spend: '2014 to 2016'}],
+        [{ position: 'Senior Software Development', company: 'IBM', time_spend: '2014 to 2016'}
+
+        ],
 
 
       :match_junior =>
-        [{ position: 'Junior Software Developer', company: 'Le Wagon', time_spend: '2018 to Present'}],
+        [{ position: 'Junior Software Developer', company: 'Le Wagon', time_spend: '2017 to 2018'}],
 
       :match_database =>
-        [{ position: 'Database Developer', company: 'Oracle', time_spend: '2016 to Present'}],
+        [{ position: 'Junior Database Developer', company: 'Oracle', time_spend: '2016 to 2018'}],
     },
   }
 end

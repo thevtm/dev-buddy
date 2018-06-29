@@ -1,197 +1,115 @@
-<div class="match-profile center-align grey lighten-5">
-<%= content_tag :div, class: "match-profile__data hide", data: { user_id: user.id } do %> <% end %>
-  <div class="background-image-wave-tw">
-    <div class="user-partial-profile">
-      <div class="user-card-partial  col s12">
-
-        <div class="user-show__picture-position collection-item avatar">
-          <img class="user-show__profile-outline avatar-user circle responsive-img z-depth-2 ">
-        </div>
-
-        <div>
-          <h4>
-            <span class="user-name-font-header"><%= user.name %></span>
-          </h4>
-        </div>
-
-        <div>
-          <h4>
-            <span class="user-show__name title-user white-text"><%= user.job_position %></span>
-          </h4>
-        </div>
-        <span class="user-show__location white-text"><%= user.location %></span>
-
-    <div class="divider divider-partial teal accent-2 center-align"></div>
-
-    <!-- end of picture and name -->
-    <div class="container container-index">
-
-
-      <div class="user-goals-skills  z-depth-2">
-
-      <!-- space -->
-        <h5 class="font-header">Skills & interests</h5>
-
-      <div style="height: 30px;">
-      <!-- space -->
-
-      </div>
-      <!-- end of the chips -->
-        <h5 class="goals-font-header">Goals</h5>
-        <div class="row">
-          <div class="col s4">
-            <div class="user-goals-icon  z-depth-2">
-             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "network.svg" %>'>
-             <p class="user-goals-text">Networking</p>
-            </div>
-          </div>
-          <div class="col s4">
-            <div class="user-goals-icon  z-depth-2">
-             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "objectif.svg" %>'>
-             <p class="user-goals-text">Career opportunity</p>
-            </div>
-          </div>
-
-          <div class="col s4">
-            <div class="user-goals-icon  z-depth-2">
-             <img class="responsive-img user-show__goal-pics" src= '<%= image_path "freelance.svg" %>'>
-             <p class="user-goals-text">Career opportunity</p>
-            </div>
-          </div>
-        </div>
-      <!-- end of the icons  -->
-
-
-        <div class="box-test z-depth-2" >
-          <div class="collapsible-header" tabindex="0" style="
-            outline: none;
-            ">
-            <h5 class="box-test-header">
-              Expertise
-            </h5>
-          </div>
-          <div class="box-test-content" style="display: block;">
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat.</span>
-          </div>
-        </div>
-
-        <div class="box-test z-depth-2" >
-          <div class="collapsible-header" tabindex="0" style="
-            outline: none;
-            ">
-            <h5 class="box-test-header">
-              Professional Experience
-            </h5>
-          </div>
-          <div class="box-test-content" style="display: block;">
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat.</span>
-          </div>
-        </div>
-
-    <div class="user-goals-skills white">
-      <h5 class="user-goals-skills_header  teal-text text-accent-2">Languages</h5>
+<div class="match-profile">
+<%= content_tag :div, class: "match-profile__data hide", data: { user_id: user.id } do %>
+<% end %>
+<div class="background-image-wave-tw">
+  <div style="height: 30px;">
+  </div>
+  <div class="user-partial-profile center-align">
+    <img class="user-show__profile-outline avatar-user circle responsive-img z-depth-2" src="<%= cl_image_path user.profile_picture %>">
+    <div class="user-information-partial">
       <div>
-          <div>
-            <% user.technology_summary[:languages].each do |language| %>
-              <div class="chip">
-               <%= language %>
-                <i class="close material-icons"></i>
-              </div>
-            <% end %>
-            </div>
-          </div>
-
-
-          <h5 class="user-goals-skills_header  teal-text text-accent-2">Methodologies</h5>
-
-          <div>
-            <% user.technology_summary[:methodologies].each do |methodologie| %>
-              <div class="chip">
-               <%= methodologie %>
-                <i class="close material-icons"></i>
-              </div>
-            <% end %>
-            </div>
-          </div>
-
-      </div>
-    </div>
-    <!-- end of the chips -->
-    <div class="container user-show__container">
-  <!-- Goals -->
-
-
-
-        <div class="box-test z-depth-2" >
-          <div class="collapsible-header" tabindex="0" style="
-            outline: none;
-            ">
-            <h5 class="box-test-header">
-              Experiences
-            </h5>
-          </div>
-          <div class="box-test-content" style="display: block;">
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat.</span>
-          </div>
-        </div>
-      <!-- end of test -->
-
-  <!-- Education: -->
-
-
-      <div class="card">
-
-        <div class="user-show__card-head">
-          <i class="medium material-icons user-show__card-head-icon">school</i>
-          <h5 class="user-show__card-head-header">Education</h5>
-        </div>
-
-        <div class="user-show__card-list">
-          <div class="user-show__card-body">
-            <h5><%= user.education[0][:diploma] %></h5>
-            <p><%= user.education[0][:school] %></p>
-          </div>
-
-        </div>
+        <h4>
+          <span class="user-show__name"><%= user.name %></span>
+        </h4>
       </div>
 
-
-
-    <!-- Experience: -->
-
-
-
-
-  <!--       <div class="background-user">
-          <div class="section">
-            <h5 class="user-experience">Experience</h5>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maxime deserunt dolor saepe, aut qui, enim earum!
-          </div>
-          <div class="divider teal accent-2"></div>
-          <div class="section">
-            <h5 class="user-education">Education</h5>
-            Obcaecati deserunt dicta nulla quas expedita doloremque dolores ipsum placeat laborum perspiciatis? Voluptates!
-          </div>
-          <div class="divider teal accent-2"></div>
-        </div> -->
-      <!-- end of background user -->
-
-        <div class="divider teal accent-2"></div>
-
-        <div>
-          <h5 class="user-show__headings">
-            About me
-          </h5>
-          <p class="flow-text grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus ipsam nulla molestiae, beatae assumenda labore, recusandae incidunt numquam. Beatae ipsam fuga iure est autem optio ipsum explicabo, natus incidunt inventore..</p>
-        </div>
-    <!-- end of user description -->
-
+      <div>
+        <span class="user-show__location title-user white-text"><%= user.job_position %></span>
+      </div>
+      <h6>
+        <span class="user-show__name"><%= user.location %></span>
+      </h6>
+      <div class="divider divider-partial teal accent-2 center-align">
+      </div>
     </div>
   </div>
+
+
+  <!-- end of picture and name -->
+  <div class="container container-index">
+
+    <div class="user-goals-skills white">
+      <h5 class="user-goals-skills_header center-align teal-text text-accent-2">Languages</h5>
+      <div class="center-align">
+        <% user.technology_summary[:languages].each do |language| %>
+          <div class="chip">
+           <%= language %>
+           <i class="close material-icons"></i>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+
+    <div class="user-goals-skills white">
+      <h5 class="user-goals-skills_header center-align teal-text text-accent-2">Methodologies</h5>
+      <div class="center-align">
+        <% user.technology_summary[:methodologies].each do |methodologie| %>
+          <div class="chip center-align">
+           <%= methodologie %>
+           <i class="close material-icons"></i>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+ <!-- end of tech summary -->
+
+    <div class="row" style="margin-top: 40px;">
+      <div class="col s4">
+        <div class="user-goals-icon-box  z-depth-2">
+         <img class="responsive-img user-goals-icon" src= '<%= image_path "network.svg" %>'>
+         <p class="user-goals-text">Networking</p>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="user-goals-icon-box  z-depth-2">
+         <img class="responsive-img user-goals-icon" src= '<%= image_path "objectif.svg" %>'>
+         <p class="user-goals-text">Career opportunity</p>
+        </div>
+      </div>
+
+      <div class="col s4">
+        <div class="user-goals-icon-box  z-depth-2">
+         <img class="responsive-img user-goals-icon" src= '<%= image_path "freelance.svg" %>'>
+         <p class="user-goals-text">Career opportunity</p>
+       </div>
+      </div>
+    </div>
+<!-- end of the icons  -->
+
+
+    <div class="box-test z-depth-2" >
+      <div class="collapsible-header" tabindex="0" style="
+      outline: none;
+        ">
+        <h5 class="box-test-header">
+          Education
+        </h5>
+      </div>
+      <div class="box-test-content" style="display: block;">
+        <h5><%= user.education[0][:diploma] %></h5>
+        <p><%= user.education[0][:school] %></p>
+        <h5><%= user.education[1][:diploma] %></h5>
+        <p><%= user.education[1][:school] %></p>
+      </div>
+    </div>
+
+    <div class="box-test z-depth-2" >
+      <div class="collapsible-header" tabindex="0" style="
+      outline: none;
+      ">
+        <h5 class="box-test-header">
+          Experience
+        </h5>
+      </div>
+      <div class="box-test-content" style="display: block;">
+        <h5><%= user.experience[0][:position] %></h5>
+        <p><%= user.experience[0][:company] %></p>
+      </div>
+    </div>
+  </div>
+<!-- end of user description -->
 </div>
+</div>
+
