@@ -44,24 +44,24 @@ class User < ApplicationRecord
     },
     technology_summary: {
       match_senior: {
-        languages: %w[C++, C#, Java, Delphi, Visual Basic],
-        methodologies: %w[Rapid Application Design (RAD), Spiral Approach],
-        software: %w[TIBCO,  Apache, Business Objects],
-        systems: %w[Unix, Windows, VAX/VMS, NeXTStep],
-        databases: %w[Access, Sybase]
+        languages: %w(C++ C# Java Visual_Basic),
+        methodologies: %w(Rapid_Application_Design Spiral_Approach),
+        software: %w(TIBCO  Apache Business_Objects),
+        systems: %w(Unix Windows VAX/VMS NeXTStep),
+        databases: %w(Access Sybase)
       },
       match_junior: {
-        languages: %w[Ruby, SQL],
-        methodologies: %w[Prototyping Approach],
-        framework: %w[Rails, Bootstrap],
+        languages: %w(Ruby SQL),
+        methodologies: %w(Prototyping Approach),
+        framework: %w(Rails Bootstrap)
       },
 
       match_database: {
-        languages: %w[C++, C#, Java, NodeJS, Visual Basic],
-        methodologies: %w[Agile, Waterfall Approach],
-        software: %w[Oracle WebLogic Server, Apache],
-        systems: %w[Unix, Windows, Net Framework, NeXTStep],
-        databases: %w[Oracle, MongoDB, SQL Server]
+        languages: %w(C++ C# Java NodeJS Visual_Basic),
+        methodologies: %w(Agile Waterfall_Approach),
+        software: %w(Oracle WebLogic_Server Apache),
+        systems: %w(Unix Windows Net Framework NeXTStep),
+        databases: %w(Oracle MongoDB SQL Server)
       }
     },
 
