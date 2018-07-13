@@ -38,7 +38,7 @@ class ChatController < ApplicationController
       .new_messages(last_message_datetime)
       .where.not(user_id: current_user.id)
 
-    new_last_message_datetime = new_messages.last ? new_messages.last.created_at.iso8601 : last_message_datetime.iso8601
+    new_last_message_datetime = new_messages.last ? new_messages.last.created_at.iso8601(10) : last_message_datetime.iso8601(10)
 
     render json: {
       new_messages: new_messages,
