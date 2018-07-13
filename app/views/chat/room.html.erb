@@ -2,7 +2,7 @@
 
 <div class="chat-room">
 
-  <%= content_tag :div, class: "chat-room__data hide", data: { otheruserlastmessagedatetime: @other_user_last_message_datetime.iso8601 } do %>
+  <%= content_tag :div, class: "chat-room__data hide", data: { otheruserlastmessagedatetime: @other_user_last_message_datetime.iso8601(10) } do %>
   <% end %>
 
   <div class="chat-room__box">

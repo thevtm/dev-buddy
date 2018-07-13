@@ -19,7 +19,7 @@ class ChatRoom < ApplicationRecord
 
   def new_messages(datetime)
     messages
-      .where("created_at > to_timestamp(?)", datetime.to_time.to_i + 1)
+      .where("created_at > ?", datetime)
       .order(created_at: :asc)
   end
 end
